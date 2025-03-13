@@ -81,7 +81,7 @@ const App = () => {
             PORTFOLIO PIANO BLAYNE
           </h1>
           <p className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14">
-            Aquí muestro mis covers que he ido haciendo, no me toqueis los cojones
+            Aquí muestro mis covers que he ido haciendo, esta página esta en desarrollo aún
           </p>
           <div className="flex flex-wrap items-center">
             <a
