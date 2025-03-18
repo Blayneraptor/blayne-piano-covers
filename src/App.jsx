@@ -76,7 +76,10 @@ const App = () => {
           }}
         ></div>
         {/* Bloque de descripción en la parte izquierda */}
-        <div className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/2 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20">
+        <div
+          className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/3 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20"
+          data-aos="fade-up" data-aos-duration="1500"
+        >
           <h1 className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]">
             PORTFOLIO PIANO BLAYNE
           </h1>
@@ -110,7 +113,7 @@ const App = () => {
         {/* Item 1 */}
         <div className="flex flex-col md:flex-row items-center md:space-x-8">
           {/* Columna: Imagen */}
-          <div className="md:w-1/3 h-[600px]">
+          <div className="md:w-1/3 h-[600px]" data-aos="fade-right" data-aos-duration="1000">
             <img
               src={castilloambu}
               alt="Descripción 1"
@@ -118,7 +121,7 @@ const App = () => {
             />
           </div>
           {/* Columna: Descripción */}
-          <div className="md:w-1/3 flex flex-col justify-center items-center text-center">
+          <div className="md:w-1/3 flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-duration="700">
             <h1 className="text-5xl font-semibold mb-4">Howl's Moving Castle</h1>
             <h2 className="text-3xl font-semibold mb-4">
               Interpretación del estribillo de "Merry-Go-Round of Life"
@@ -131,7 +134,7 @@ const App = () => {
             </p>
           </div>
           {/* Columna: Video */}
-          <div className="md:w-1/3 h-[600px]">
+          <div className="md:w-1/3 h-[600px]" data-aos="fade-left" data-aos-duration="1000">
             <iframe
               title="vimeo-player"
               src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
@@ -146,7 +149,7 @@ const App = () => {
         {/* Item 2 */}
         <div className="flex flex-col md:flex-row items-center md:space-x-8">
           {/* Columna: Imagen */}
-          <div className="md:w-1/3 h-[600px]">
+          <div className="md:w-1/3 h-[600px]" data-aos="fade-right" data-aos-duration="1000">
             <img
               src={castilloambu}
               alt="Descripción 2"
@@ -154,14 +157,14 @@ const App = () => {
             />
           </div>
           {/* Columna: Descripción */}
-          <div className="md:w-1/3 flex flex-col justify-center items-center text-center">
+          <div className="md:w-1/3 flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-duration="700">
             <h2 className="text-3xl font-semibold mb-4">Descripción 2</h2>
             <p className="text-xl">
               La última descripción. Aquí puedes agregar contenido relacionado con esta sección.
             </p>
           </div>
           {/* Columna: Video */}
-          <div className="md:w-1/3 h-[600px]">
+          <div className="md:w-1/3 h-[600px]" data-aos="fade-left" data-aos-duration="1000">
             <iframe
               title="vimeo-player"
               src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
@@ -176,30 +179,31 @@ const App = () => {
       </section>
 
       {/* Formulario de Contacto */}
-<section
-  id="contacto"
-  className="p-8"
-  style={{
-    backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
-    backgroundSize: "100% 50%, 100% 50%, cover",
-    backgroundPosition: "top, bottom, center"
-  }}
->
-  <ContactForm />
-</section>
-{/* Footer */}
-<footer
-  className="text-white text-center py-8"
-  style={{
-    backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
-    backgroundSize: "100% 100%, 100% 100%, cover",
-    backgroundPosition: "top, bottom, center"
-  }}
->
-  <p className="text-sm">
-    &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos reservados.
-  </p>
-</footer>
+      <section
+        id="contacto"
+        className="p-8"
+        style={{
+          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
+          backgroundSize: "100% 50%, 100% 50%, cover",
+          backgroundPosition: "top, bottom, center"
+        }}
+        data-aos="fade-up" 
+      >
+        <ContactForm />
+      </section>
+      {/* Footer */}
+      <footer
+        className="text-white text-center py-8"
+        style={{
+          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
+          backgroundSize: "100% 100%, 100% 100%, cover",
+          backgroundPosition: "top, bottom, center"
+        }}
+      >
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos reservados.
+        </p>
+      </footer>
       
     </div>
   );
