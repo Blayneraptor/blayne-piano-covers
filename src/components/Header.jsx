@@ -15,12 +15,12 @@ const Header = () => {
 
   return (
     <nav
-    className={`fixed top-0 left-0 right-0 z-50 border-gray-200 transition-all duration-300 dark:border-gray-700 ${
-      isScrolled
-        ? "bg-black bg-opacity-0 backdrop-blur-md"
-        : "bg-transparent "
-    }`}
-  >
+      className={`fixed top-0 left-0 right-0 z-50 border-gray-200 transition-all duration-1000 dark:border-gray-700 ${
+        isScrolled
+          ? "bg-black bg-opacity-0 backdrop-blur-md"
+          : "bg-transparent backdrop-blur-0"
+      }`}
+    >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img

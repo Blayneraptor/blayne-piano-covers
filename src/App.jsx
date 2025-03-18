@@ -77,7 +77,7 @@ const App = () => {
         ></div>
         {/* Bloque de descripción en la parte izquierda */}
         <div
-          className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/3 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20"
+          className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/4 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20"
           data-aos="fade-up" data-aos-duration="1500"
         >
           <h1 className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]">
