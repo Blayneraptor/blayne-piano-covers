@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,87 +66,67 @@ const Header = () => {
                 Inicio
               </a>
             </li>
-            <li className="relative">
-            <button
-  id="dropdownNavbarLink"
-  onClick={() => setIsOpen(!isOpen)}
-  className={`flex items-center justify-between w-full py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto ${
-    isScrolled ? "text-white" : "text-white"
-  }`}
->
-  Covers{" "}
-  <svg
-    className="w-2.5 h-2.5 ms-2.5"
-    aria-hidden="true"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 10 6"
-  >
-    <path
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      d="m1 1 4 4 4-4"
-    />
-  </svg>
-</button>
-{isOpen && (
-  <div
-    id="dropdownNavbar"
-    className="absolute left-0 mt-2 z-10 font-normal bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-44"
-  >
-    <ul
-      className="py-2 text-sm text-white"
-      aria-labelledby="dropdownLargeButton"
-    >
-      <li>
-        <a
-          href="#item1"
-          className="block px-4 py-2 hover:bg-gray-800"
-        >
-          Howl's Merry
-        </a>
-      </li>
-      <li>
-        <a
-          href="#item2"
-          className="block px-4 py-2 hover:bg-gray-800"
-        >
-          Canción 2
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className="block px-4 py-2 hover:bg-gray-800"
-        >
-          Canción 3
-        </a>
-      </li>
-    </ul>
-  </div>
-)}
+            {/* Usamos group para abrir el menú al hacer hover */}
+            <li className="relative group">
+              <div className="flex items-center justify-between w-full py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white cursor-pointer">
+                Covers{" "}
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </div>
+              <div className="absolute left-0 mt-2 z-10 font-normal bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-44 opacity-0 transform scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
+                <ul className="py-2 text-sm text-white">
+                  <li>
+                    <a
+                      href="#item1"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
+                      Howl's Merry
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#item2"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
+                      Canción 2
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="block px-4 py-2 hover:bg-gray-800">
+                      Canción 3
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
-            <a
-    href="#"
-    className={`block py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 ${
-      isScrolled ? "text-white" : "text-white"
-    }`}
-  >
-    Próximamente
-  </a>
+              <a
+                href="#"
+                className="block py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
+              >
+                Próximamente
+              </a>
             </li>
             <li>
-            <a
-    href="#"
-    className={`block py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 ${
-      isScrolled ? "text-white" : "text-white"
-    }`}
-  >
-    Contacto
-  </a>
+              <a
+                href="#"
+                className="block py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
+              >
+                Contacto
+              </a>
             </li>
           </ul>
         </div>
