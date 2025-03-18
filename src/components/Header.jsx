@@ -103,7 +103,7 @@ const Header = () => {
     >
       <li>
         <a
-          href="#"
+          href="#item1"
           className="block px-4 py-2 hover:bg-gray-800"
         >
           Howl's Merry
@@ -111,7 +111,7 @@ const Header = () => {
       </li>
       <li>
         <a
-          href="#"
+          href="#item2"
           className="block px-4 py-2 hover:bg-gray-800"
         >
           Canción 2
