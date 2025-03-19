@@ -132,7 +132,7 @@ const App = () => {
         </div>
       </section>
       {/* Barra */}
-      <div id="explorar" className="mb-12 border-b border-white/10">
+      <div id="explorar" className="mb-6 border-b border-white/10">
         <div className="-mx-4 flex">
           <div className="w-full px-4"></div>
         </div>
@@ -157,7 +157,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-4/5 md:w-1/3 h-[350px] md:h-[650px] pb-10 md:pb-0"
+            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -170,7 +170,7 @@ const App = () => {
           </div>
          {/* Columna: Descripción */}
 <div
-  className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8"
+  className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
   data-aos="fade-up"
   data-aos-duration="700"
 >
