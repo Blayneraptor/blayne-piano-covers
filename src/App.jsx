@@ -189,7 +189,7 @@ const App = () => {
 </div>
 {/* Columna: Video */}
 <div
-  className="relative z-10 md:w-1/3 h-[600px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
+  className="relative z-10 md:w-1/3 h-[550px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
   data-aos="fade-left"
   data-aos-duration="1000"
 >
