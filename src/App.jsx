@@ -1,9 +1,13 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import bgImage from "./assets/bg3.png";
 import castilloambu from "./assets/castilloambu.jpg";
-import profileImg from "./assets/pianoperfil.png";
 import fondoazul from "./assets/fondoazul.png"; // Importamos el fondo azul
 import { useForm, ValidationError } from "@formspree/react";
+import bosque from "./assets/bosquecore.jpg";
+import nubes1 from "./assets/nubes1.jpg";
+import bosquehielo from "./assets/bosquehielo.jpg";
+import nubes2 from "./assets/nubes2.jpg";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xannaejy");
@@ -61,6 +65,9 @@ function ContactForm() {
 }
 
 const App = () => {
+  // Ahora openImage almacena la ruta de la imagen seleccionada o null
+  const [openImage, setOpenImage] = useState(null);
+
   return (
     <div className="bg-black text-white scroll-smooth overflow-x-hidden">
       <Header />
@@ -86,14 +93,14 @@ const App = () => {
         <div className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/2 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20 animate-blur">
           <h1
             className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]"
-            data-aos="fade-up" // Título aparece desde la derecha
-            data-aos-duration="1000" // Duración de la animación
+            data-aos="fade-up"
+            data-aos-duration="1000"
           >
             PORTFOLIO PIANO BLAYNE
           </h1>
           <p
             className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14"
-            data-aos="fade-up" // Desaparece desde la derecha
+            data-aos="fade-up"
             data-aos-duration="1000"
           >
             Aquí muestro mis covers que he ido haciendo, esta página está en
@@ -103,7 +110,7 @@ const App = () => {
             <a
               href="#item1"
               className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-indigo-500 shadow-lg shadow-indigo-600/50 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
-              data-aos="fade-up" // Desvanecimiento hacia arriba
+              data-aos="fade-up"
               data-aos-duration="1000"
             >
               Explorar Ahora
@@ -111,7 +118,7 @@ const App = () => {
             <a
               href="#contacto"
               className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600 hover:bg-blue-600"
-              data-aos="fade-up" // Desvanecimiento desde abajo
+              data-aos="fade-up"
               data-aos-duration="1000"
             >
               Contacta Conmigo
@@ -136,7 +143,7 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.2) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -151,7 +158,8 @@ const App = () => {
             <img
               src={castilloambu}
               alt="Descripción 1"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(castilloambu)}
             />
           </div>
           {/* Columna: Descripción */}
@@ -195,57 +203,266 @@ const App = () => {
         </div>
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
-        {/* Item 2 */}
+        {/* Item 2 (mismo contenido que Item 1 con modificaciones en textos e imagen y video) */}
         <div
           id="item2"
           className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
         >
-          {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
-            className="absolute inset-0 flex justify-center items-center pointer-events-none"
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `url(${fondoazul})`,
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.3,
             }}
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="md:w-1/3 h-[650px]"
+            className="relative z-10 md:w-1/3 h-[650px]"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
             <img
-              src={castilloambu}
-              alt="Descripción 2"
-              className="w-full h-full object-cover rounded-lg"
+              src={bosque}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(bosque)}
             />
           </div>
           {/* Columna: Descripción */}
           <div
-            className="md:w-1/3 flex flex-col justify-center items-center text-center"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Título Item 2</h1>
-            <h2 className="text-3xl font-semibold mb-4">Subtítulo Item 2</h2>
-            <h1 className="text-4xl font-semibold mb-4">Otra Información</h1>
+            <h1 className="text-5xl font-semibold mb-4">
+              Waltz No. 2 Shostakóvich
+            </h1>
+            <h2 className="text-3xl font-semibold mb-4">
+              Interpretación de la canción "Waltz No. 2"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">Waltz No.2</h1>
             <p className="text-xl">
-              La última descripción. Aquí puedes agregar contenido relacionado
-              con esta sección.
+              En este video interpreto la icónica "Waltz No. 2" de Dmitri
+              Shostakovich. Esta obra, conocida por su inconfundible mezcla de
+              melancolía y elegancia, captura a la perfección la dualidad
+              emocional característica del compositor.
             </p>
           </div>
           {/* Columna: Video */}
           <div
-            className="md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              width="370"
+              height="661"
+              src="https://www.youtube.com/embed/1WghDkHuIjc?vq=hd2160"
+              title="Waltz No. 2 Shostakóvich Cover Piano"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 3 */}
+        <div
+          id="item3"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={nubes1}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(nubes1)}
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">Empty Core 1</h1>
+            <h2 className="text-3xl font-semibold mb-4">
+              Interpretación de la canción "Empty Core 1"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">Empty Core 1</h1>
+            <p className="text-xl">
+              La canción "Empty Core 1", creada por Tomy Sauvestre, está
+              inspirada en la emotiva pieza "Drowning Love". En este video,
+              interpreto el estribillo de esta composición única, que captura la
+              melancolía y la belleza de la obra original, pero con un enfoque
+              personal y renovado.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[670px] p-0 m-0 ml-4"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
             <iframe
               title="vimeo-player"
-              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+              src="https://player.vimeo.com/video/1029711298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="90%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 4 */}
+        <div
+          id="item4"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={bosquehielo}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(bosquehielo)}
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">Love Story</h1>
+            <h2 className="text-3xl font-semibold mb-4">
+              Interpretación de la canción "Love Story"fe"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">Love Story</h1>
+            <p className="text-xl">
+              <p>
+                En este video interpreto una emotiva pieza de la cantante
+                francesa Indila, "Love Story". Esta canción, incluida en su
+                álbum Mini World (2014), combina una melodía delicada con una
+                narrativa poética que evoca emociones profundas.
+              </p>
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1029706840?ts=0&share=copy"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 5 */}
+        <div
+          id="item5"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={nubes2}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(nubes2)}
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">
+            Idea 22
+            </h1>
+            <h2 className="text-3xl font-semibold mb-4">
+            Interpretación de la canción "Idea 22"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">
+            Idea 22
+            </h1>
+            <p className="text-xl">
+            En este video interpreto la cautivadora pieza "Idea 22" de Gibrán Alcocer. 
+            Esta composición destaca por su atmósfera introspectiva y su capacidad para transmitir una profundidad emocional única,
+            invitando al oyente a un viaje sonoro lleno de matices y sensibilidad.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1043432123?ts=0&share=copy"
               width="100%"
               height="100%"
               frameBorder="0"
@@ -257,7 +474,19 @@ const App = () => {
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>
-
+      {/* Modal para ver la imagen en grande */}
+      {openImage && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
+          onClick={() => setOpenImage(null)}
+        >
+          <img
+            src={openImage}
+            alt="Imagen ampliada"
+            className="max-w-full max-h-full rounded-lg"
+          />
+        </div>
+      )}
       {/* Footer con ContactForm */}
       <footer
         id="contacto"

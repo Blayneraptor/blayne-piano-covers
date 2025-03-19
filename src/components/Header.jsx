@@ -93,7 +93,7 @@ const Header = () => {
                       href="#item1"
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
-                      Howl's Merry
+                      Howl's Moving Castle
                     </a>
                   </li>
                   <li>
@@ -101,12 +101,22 @@ const Header = () => {
                       href="#item2"
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
-                      Canción 2
+                      Waltz Nº 2 Shostakóvich
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-800">
-                      Canción 3
+                    <a href="#item3" className="block px-4 py-2 hover:bg-gray-800">
+                      Empty Core 1
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#item4" className="block px-4 py-2 hover:bg-gray-800">
+                      Love Story Indila
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#item5" className="block px-4 py-2 hover:bg-gray-800">
+                      Idea 22 Gibran Alcocer
                     </a>
                   </li>
                 </ul>
