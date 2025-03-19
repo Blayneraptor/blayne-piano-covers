@@ -140,11 +140,11 @@ const App = () => {
 
       {/* Grid en columna única para descripción, imagen y video */}
       <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8 justify-items-center">
-  {/* Item 1 */}
-  <div
-    id="item1"
-    className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
-  >
+        {/* Item 1 */}
+        <div
+          id="item1"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
+        >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
@@ -168,48 +168,51 @@ const App = () => {
               onClick={() => setOpenImage(castilloambu)}
             />
           </div>
-         {/* Columna: Descripción */}
-<div
-  className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
-  data-aos="fade-up"
-  data-aos-duration="700"
->
-  <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
-    Howl's Moving Castle
-  </h1>
-  <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
-    Interpretación del estribillo de "Merry-Go-Round of Life"
-  </h2>
-  <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
-    El Castillo Ambulante
-  </h1>
-  <p className="hidden md:block text-base md:text-xl">
-    En este video interpreto el estribillo de una hermosa pieza compuesta por Joe Hisaishi para la película homónima de Studio Ghibli. La película, dirigida por Hayao Miyazaki, nos transporta a un mundo mágico lleno de aventuras.
-  </p>
-</div>
-{/* Columna: Video */}
-<div
-  className="relative z-10 md:w-1/3 h-[550px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
-  data-aos="fade-left"
-  data-aos-duration="1000"
->
-  <iframe
-    title="vimeo-player"
-    src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
-    width="100%"
-    height="100%"
-    frameBorder="0"
-    allowFullScreen
-    className="rounded-lg"
-  ></iframe>
-</div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Howl's Moving Castle
+            </h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
+              Interpretación del estribillo de "Merry-Go-Round of Life"
+            </h2>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              El Castillo Ambulante
+            </h1>
+            <p className="hidden md:block text-base md:text-xl">
+              En este video interpreto el estribillo de una hermosa pieza
+              compuesta por Joe Hisaishi para la película homónima de Studio
+              Ghibli. La película, dirigida por Hayao Miyazaki, nos transporta a
+              un mundo mágico lleno de aventuras.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[550px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
         </div>
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
         {/* Item 2 (mismo contenido que Item 1 con modificaciones en textos e imagen y video) */}
         <div
           id="item2"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          classNam className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -223,7 +226,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -236,18 +239,18 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
               Waltz No. 2 Shostakóvich
             </h1>
-            <h2 className="text-3xl font-semibold mb-4">
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Waltz No. 2"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Waltz No.2</h1>
-            <p className="text-xl">
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Waltz No.2</h1>
+            <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la icónica "Waltz No. 2" de Dmitri
               Shostakovich. Esta obra, conocida por su inconfundible mezcla de
               melancolía y elegancia, captura a la perfección la dualidad
@@ -256,7 +259,7 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            className="relative z-10 md:w-1/3 h-[300px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
