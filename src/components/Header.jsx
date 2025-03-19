@@ -119,6 +119,16 @@ const Header = () => {
                       Idea 22 Gibran Alcocer
                     </a>
                   </li>
+                  <li>
+                    <a href="#item6" className="block px-4 py-2 hover:bg-gray-800">
+                      Idea 1 Gibran Alcocer
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#item7" className="block px-4 py-2 hover:bg-gray-800">
+                      Koe no Katachi
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>

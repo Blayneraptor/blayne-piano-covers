@@ -8,6 +8,8 @@ import bosque from "./assets/bosquecore.jpg";
 import nubes1 from "./assets/nubes1.jpg";
 import bosquehielo from "./assets/bosquehielo.jpg";
 import nubes2 from "./assets/nubes2.jpg";
+import nubes3 from "./assets/nubes3.jpg";
+import nubes4 from "./assets/nubes4.jpg";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xannaejy");
@@ -468,6 +470,144 @@ const App = () => {
               frameBorder="0"
               allowFullScreen
               className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 6 */}
+        <div
+          id="item6"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={nubes3}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(nubes3)}
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">
+            Idea 1
+            </h1>
+            <h2 className="text-3xl font-semibold mb-4">
+            Interpretación de la canción "Idea 1"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">
+            Idea 1
+            </h1>
+            <p className="text-xl">
+            En este video interpreto la cautivadora pieza "Idea 1" de Gibrán Alcocer. 
+            Esta composición destaca por su atmósfera introspectiva y su capacidad para transmitir 
+            una profundidad emocional única, invitando al oyente a un viaje sonoro lleno de matices y sensibilidad.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1043437260?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 7 */}
+        <div
+          id="item7"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={nubes4}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg cursor-pointer transition-all duration-300 filter hover:grayscale"
+              onClick={() => setOpenImage(nubes4)}
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">
+            Koe no Katachi
+            </h1>
+            <h2 className="text-3xl font-semibold mb-4">
+            Interpretación de la canción de la película "A Silent Voice"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">
+            Koe no Katachi
+            </h1>
+            <p className="text-xl">
+            En este video interpreto la emotiva pieza de piano de "Koe no Katachi"(A Silent Voice).
+             Esta obra, cargada de sensibilidad y profundidad, refleja a la perfección los sentimientos de conexión y 
+             redención que impregnan la historia, evocando una delicada mezcla de nostalgia y esperanza.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+             width="350"
+             height="681"
+             src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160"
+             title="Koe No Katachi"
+             frameBorder="0"
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+             referrerPolicy="strict-origin-when-cross-origin"
+             allowFullScreen
+             className="rounded-lg"
             ></iframe>
           </div>
         </div>
