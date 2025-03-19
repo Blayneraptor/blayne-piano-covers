@@ -132,15 +132,14 @@ const App = () => {
           id="item1"
           className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
         >
-          {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
+          {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
-            className="absolute inset-0 flex justify-center items-center pointer-events-none"
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `url(${fondoazul})`,
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.2) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.3,
             }}
           ></div>
           {/* Columna: Imagen */}

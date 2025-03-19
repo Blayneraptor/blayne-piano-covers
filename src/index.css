@@ -65,3 +65,42 @@
 .animate-blur {
   animation: blurIn 0.7s ease-out forwards;
 }
+
+@keyframes fadeInFromDark {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+@keyframes continuousZoomPan {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* La animación se divide en dos fases:
+   1. fadeInFromDark: Aparece desde oscuro en 2s.
+   2. continuousZoomPan: Movimiento continuo (con delay de 2s para que inicie tras la fase 1).
+*/
+.animate-fadeIn {
+  animation: 
+    fadeInFromDark 2s ease-out forwards,
+    continuousZoomPan 20s ease-in-out infinite 2s;
+}
