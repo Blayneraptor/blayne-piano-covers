@@ -80,6 +80,7 @@ const App = () => {
           className="absolute inset-0 animate-bg"
           style={{ backgroundImage: `url(${bgImage})` }}
         ></div>
+        
         {/* Capa para el gradiente o overlay */}
         <div
           className="absolute inset-0"
@@ -111,7 +112,7 @@ const App = () => {
           <div className="flex flex-wrap items-center">
             <a
               href="#item1"
-              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-indigo-500 shadow-lg shadow-indigo-600/50 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
+              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-blue-900 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-slate-900"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -119,7 +120,7 @@ const App = () => {
             </a>
             <a
               href="#contacto"
-              className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600 hover:bg-blue-600"
+              className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -134,6 +135,7 @@ const App = () => {
           <div className="w-full px-4"></div>
         </div>
       </div>
+      
       {/* Grid en columna única para descripción, imagen y video */}
       <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8">
         {/* Item 1 */}
