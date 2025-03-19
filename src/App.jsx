@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import bgImage from "./assets/bg3.png";
 import castilloambu from "./assets/castilloambu.jpg";
 import profileImg from "./assets/pianoperfil.png";
+import fondoazul from "./assets/fondoazul.png"; // Importamos el fondo azul
 import { useForm, ValidationError } from "@formspree/react";
 
 function ContactForm() {
@@ -72,24 +73,26 @@ const App = () => {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%)"
+              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%)",
           }}
         ></div>
         {/* Bloque de descripción en la parte izquierda */}
         <div
           className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/4 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20"
-          data-aos="fade-up" data-aos-duration="1500"
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <h1 className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]">
             PORTFOLIO PIANO BLAYNE
           </h1>
           <p className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14">
-            Aquí muestro mis covers que he ido haciendo, esta página esta en desarrollo aún
+            Aquí muestro mis covers que he ido haciendo, esta página está en
+            DESARROLLO.
           </p>
           <div className="flex flex-wrap items-center">
             <a
               href="#item1"
-              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md border-2 border-blue-600 bg-blue-600 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
+              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-indigo-500 shadow-lg shadow-indigo-600/50 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
             >
               Explorar Ahora
             </a>
@@ -108,83 +111,138 @@ const App = () => {
           <div className="w-full px-4"></div>
         </div>
       </div>
-{/* Grid en columna única para descripción, imagen y video */}
-<section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8">
-  {/* Item 1 */}
-<div id="item1" className="scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-8 ml-8">
-  {/* Columna: Imagen */}
-  <div className="md:w-1/3 h-[650px]" data-aos="fade-right" data-aos-duration="1000">
-    <img
-      src={castilloambu}
-      alt="Descripción 1"
-      className="w-full h-full object-cover rounded-lg"
-    />
-  </div>
-  {/* Columna: Descripción */}
-  <div className="md:w-1/3 flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-duration="700">
-    <h1 className="text-5xl font-semibold mb-4">Howl's Moving Castle</h1>
-    <h2 className="text-3xl font-semibold mb-4">
-      Interpretación del estribillo de "Merry-Go-Round of Life"
-    </h2>
-    <h1 className="text-4xl font-semibold mb-4">El Castillo Ambulante</h1>
-    <p className="text-xl">
-      En este video interpreto el estribillo de una hermosa pieza compuesta
-      por Joe Hisaishi para la película homónima de Studio Ghibli. La película,
-      dirigida por Hayao Miyazaki, nos transporta a un mundo mágico lleno de aventuras.
-    </p>
-  </div>
-  {/* Columna: Video */}
-  <div className="md:w-1/3 h-[650px] p-0 m-0 ml-4" data-aos="fade-left" data-aos-duration="1000">
-    <iframe
-      title="vimeo-player"
-      src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      allowFullScreen
-      className="rounded-lg"
-    ></iframe>
-  </div>
-</div>
-{/* Nueva Barra para separación */}
-<div id="more-items" className="my-8 border-b border-white/10"></div>
-{/* Item 2 */}
-<div
-  id="item2"
-  className="scroll-mt-[215px] flex flex-col md:flex-row items-center justify-evenly md:space-x-8 ml-8"
->
-  {/* Columna: Imagen */}
-  <div className="md:w-1/3 h-[650px]" data-aos="fade-right" data-aos-duration="1000">
-    <img
-      src={castilloambu}
-      alt="Descripción 2"
-      className="w-full h-full object-cover rounded-lg"
-    />
-  </div>
-  {/* Columna: Descripción */}
-  <div className="md:w-1/3 flex flex-col justify-center items-center text-center" data-aos="fade-up" data-aos-duration="700">
-    <h1 className="text-5xl font-semibold mb-4">Título Item 2</h1>
-    <h2 className="text-3xl font-semibold mb-4">Subtítulo Item 2</h2>
-    <h1 className="text-4xl font-semibold mb-4">Otra Información</h1>
-    <p className="text-xl">
-      La última descripción. Aquí puedes agregar contenido relacionado con esta sección.
-    </p>
-  </div>
-  {/* Columna: Video */}
-  <div className="md:w-1/3 h-[650px] p-0 m-0 ml-4" data-aos="fade-left" data-aos-duration="1000">
-    <iframe
-      title="vimeo-player"
-      src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      allowFullScreen
-      className="rounded-lg"
-    ></iframe>
-  </div>
-</div>
-{/* Nueva Barra para separación */}
-<div id="more-items" className="my-8 border-b border-white/10"></div>
+      {/* Grid en columna única para descripción, imagen y video */}
+      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8">
+        {/* Item 1 */}
+        <div
+          id="item1"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+        >
+          {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none"
+            style={{
+              backgroundImage: `url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.5,
+            }}
+          ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={castilloambu}
+              alt="Descripción 1"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">
+              Howl's Moving Castle
+            </h1>
+            <h2 className="text-3xl font-semibold mb-4">
+              Interpretación del estribillo de "Merry-Go-Round of Life"
+            </h2>
+            <h1 className="text-4xl font-semibold mb-4">
+              El Castillo Ambulante
+            </h1>
+            <p className="text-xl">
+              En este video interpreto el estribillo de una hermosa pieza
+              compuesta por Joe Hisaishi para la película homónima de Studio
+              Ghibli. La película, dirigida por Hayao Miyazaki, nos transporta a
+              un mundo mágico lleno de aventuras.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
+        {/* Item 2 */}
+        <div
+          id="item2"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          >
+            {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
+            <div
+              className="absolute inset-0 flex justify-center items-center pointer-events-none"
+              style={{
+                backgroundImage: `url(${fondoazul})`,
+                backgroundSize: "contain",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                opacity: 0.5,
+              }}
+            ></div>
+          {/* Columna: Imagen */}
+          <div
+            className="md:w-1/3 h-[650px]"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <img
+              src={castilloambu}
+              alt="Descripción 2"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          {/* Columna: Descripción */}
+          <div
+            className="md:w-1/3 flex flex-col justify-center items-center text-center"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <h1 className="text-5xl font-semibold mb-4">Título Item 2</h1>
+            <h2 className="text-3xl font-semibold mb-4">Subtítulo Item 2</h2>
+            <h1 className="text-4xl font-semibold mb-4">Otra Información</h1>
+            <p className="text-xl">
+              La última descripción. Aquí puedes agregar contenido relacionado
+              con esta sección.
+            </p>
+          </div>
+          {/* Columna: Video */}
+          <div
+            className="md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <iframe
+              title="vimeo-player"
+              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+          </div>
+        </div>
+        {/* Nueva Barra para separación */}
+        <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>
 
       {/* Formulario de Contacto */}
@@ -194,9 +252,9 @@ const App = () => {
         style={{
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
           backgroundSize: "100% 50%, 100% 50%, cover",
-          backgroundPosition: "top, bottom, center"
+          backgroundPosition: "top, bottom, center",
         }}
-        data-aos="fade-up" 
+        data-aos="fade-up"
       >
         <ContactForm />
       </section>
@@ -206,14 +264,14 @@ const App = () => {
         style={{
           backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
           backgroundSize: "100% 100%, 100% 100%, cover",
-          backgroundPosition: "top, bottom, center"
+          backgroundPosition: "top, bottom, center",
         }}
       >
         <p className="text-sm">
-          &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos reservados.
+          &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos
+          reservados.
         </p>
       </footer>
-      
     </div>
   );
 };
