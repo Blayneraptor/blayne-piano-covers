@@ -10,6 +10,7 @@ import bosquehielo from "./assets/bosquehielo.jpg";
 import nubes2 from "./assets/nubes2.jpg";
 import nubes3 from "./assets/nubes3.jpg";
 import nubes4 from "./assets/nubes4.jpg";
+import portadakoe from "./assets/portadakoe.png"
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xannaejy");
@@ -69,6 +70,7 @@ function ContactForm() {
 const App = () => {
   // Ahora openImage almacena la ruta de la imagen seleccionada o null
   const [openImage, setOpenImage] = useState(null);
+  const [isKoePlayed, setIsKoePlayed] = useState(false); 
 
   return (
     <div className="bg-black text-white scroll-smooth overflow-x-hidden">
@@ -562,7 +564,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 portadakoe"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -575,7 +577,7 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8 pl-20"
             data-aos="fade-up"
             data-aos-duration="700"
           >
@@ -594,25 +596,40 @@ const App = () => {
              redención que impregnan la historia, evocando una delicada mezcla de nostalgia y esperanza.
             </p>
           </div>
-          {/* Columna: Video */}
-          <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
+          {/* Columna: Video o Portada */}
+        <div
+          className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          {isKoePlayed ? (
             <iframe
-             width="350"
-             height="681"
-             src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160"
-             title="Koe No Katachi"
-             frameBorder="0"
-             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-             referrerPolicy="strict-origin-when-cross-origin"
-             allowFullScreen
-             className="rounded-lg"
+              width="350"
+              height="681"
+              src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160&autoplay=1"
+              title="Koe No Katachi"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="rounded-lg"
             ></iframe>
-          </div>
+          ) : (
+            <div className="relative cursor-pointer" onClick={() => setIsKoePlayed(true)}>
+              <img
+  src={portadakoe}
+  alt="Portada Koe No Katachi"
+  className="portadakoe object-cover rounded-lg mx-auto"/>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="currentColor">
+                  <circle cx="32" cy="32" r="32" opacity="0.7" />
+                  <polygon points="26,20 26,44 46,32" fill="white" />
+                </svg>
+              </div>
+            </div>
+          )}
         </div>
+      </div>
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>

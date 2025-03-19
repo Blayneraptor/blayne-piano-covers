@@ -104,3 +104,8 @@
     fadeInFromDark 2s ease-out forwards,
     continuousZoomPan 20s ease-in-out infinite 2s;
 }
+
+.portadakoe {
+  width: 350px;
+  height: 650px;
+}
