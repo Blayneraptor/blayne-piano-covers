@@ -126,7 +126,7 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.5,
+              opacity: 0.3,
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -195,7 +195,7 @@ const App = () => {
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                opacity: 0.5,
+                opacity: 0.3,
               }}
             ></div>
           {/* Columna: Imagen */}
