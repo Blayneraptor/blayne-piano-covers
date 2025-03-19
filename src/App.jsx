@@ -10,7 +10,7 @@ import bosquehielo from "./assets/bosquehielo.jpg";
 import nubes2 from "./assets/nubes2.jpg";
 import nubes3 from "./assets/nubes3.jpg";
 import nubes4 from "./assets/nubes4.jpg";
-import portadakoe from "./assets/portadakoe.png"
+import portadakoe from "./assets/portadakoe.png";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xannaejy");
@@ -70,7 +70,7 @@ function ContactForm() {
 const App = () => {
   // Ahora openImage almacena la ruta de la imagen seleccionada o null
   const [openImage, setOpenImage] = useState(null);
-  const [isKoePlayed, setIsKoePlayed] = useState(false); 
+  const [isKoePlayed, setIsKoePlayed] = useState(false);
 
   return (
     <div className="bg-black text-white scroll-smooth overflow-x-hidden">
@@ -82,7 +82,7 @@ const App = () => {
           className="absolute inset-0 animate-bg"
           style={{ backgroundImage: `url(${bgImage})` }}
         ></div>
-        
+
         {/* Capa para el gradiente o overlay */}
         <div
           className="absolute inset-0"
@@ -137,14 +137,14 @@ const App = () => {
           <div className="w-full px-4"></div>
         </div>
       </div>
-      
+
       {/* Grid en columna única para descripción, imagen y video */}
-      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8">
-        {/* Item 1 */}
-        <div
-          id="item1"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
-        >
+      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8 justify-items-center">
+  {/* Item 1 */}
+  <div
+    id="item1"
+    className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
+  >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
@@ -157,7 +157,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 w-4/5 md:w-1/3 h-[350px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -168,44 +168,41 @@ const App = () => {
               onClick={() => setOpenImage(castilloambu)}
             />
           </div>
-          {/* Columna: Descripción */}
-          <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
-            data-aos="fade-up"
-            data-aos-duration="700"
-          >
-            <h1 className="text-5xl font-semibold mb-4">
-              Howl's Moving Castle
-            </h1>
-            <h2 className="text-3xl font-semibold mb-4">
-              Interpretación del estribillo de "Merry-Go-Round of Life"
-            </h2>
-            <h1 className="text-4xl font-semibold mb-4">
-              El Castillo Ambulante
-            </h1>
-            <p className="text-xl">
-              En este video interpreto el estribillo de una hermosa pieza
-              compuesta por Joe Hisaishi para la película homónima de Studio
-              Ghibli. La película, dirigida por Hayao Miyazaki, nos transporta a
-              un mundo mágico lleno de aventuras.
-            </p>
-          </div>
-          {/* Columna: Video */}
-          <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
-          </div>
+         {/* Columna: Descripción */}
+<div
+  className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8"
+  data-aos="fade-up"
+  data-aos-duration="700"
+>
+  <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+    Howl's Moving Castle
+  </h1>
+  <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
+    Interpretación del estribillo de "Merry-Go-Round of Life"
+  </h2>
+  <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+    El Castillo Ambulante
+  </h1>
+  <p className="hidden md:block text-base md:text-xl">
+    En este video interpreto el estribillo de una hermosa pieza compuesta por Joe Hisaishi para la película homónima de Studio Ghibli. La película, dirigida por Hayao Miyazaki, nos transporta a un mundo mágico lleno de aventuras.
+  </p>
+</div>
+{/* Columna: Video */}
+<div
+  className="relative z-10 md:w-1/3 h-[600px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
+  data-aos="fade-left"
+  data-aos-duration="1000"
+>
+  <iframe
+    title="vimeo-player"
+    src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    allowFullScreen
+    className="rounded-lg"
+  ></iframe>
+</div>
         </div>
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
@@ -445,19 +442,17 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">
-            Idea 22
-            </h1>
+            <h1 className="text-5xl font-semibold mb-4">Idea 22</h1>
             <h2 className="text-3xl font-semibold mb-4">
-            Interpretación de la canción "Idea 22"
+              Interpretación de la canción "Idea 22"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">
-            Idea 22
-            </h1>
+            <h1 className="text-4xl font-semibold mb-4">Idea 22</h1>
             <p className="text-xl">
-            En este video interpreto la cautivadora pieza "Idea 22" de Gibrán Alcocer. 
-            Esta composición destaca por su atmósfera introspectiva y su capacidad para transmitir una profundidad emocional única,
-            invitando al oyente a un viaje sonoro lleno de matices y sensibilidad.
+              En este video interpreto la cautivadora pieza "Idea 22" de Gibrán
+              Alcocer. Esta composición destaca por su atmósfera introspectiva y
+              su capacidad para transmitir una profundidad emocional única,
+              invitando al oyente a un viaje sonoro lleno de matices y
+              sensibilidad.
             </p>
           </div>
           {/* Columna: Video */}
@@ -513,19 +508,17 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">
-            Idea 1
-            </h1>
+            <h1 className="text-5xl font-semibold mb-4">Idea 1</h1>
             <h2 className="text-3xl font-semibold mb-4">
-            Interpretación de la canción "Idea 1"
+              Interpretación de la canción "Idea 1"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">
-            Idea 1
-            </h1>
+            <h1 className="text-4xl font-semibold mb-4">Idea 1</h1>
             <p className="text-xl">
-            En este video interpreto la cautivadora pieza "Idea 1" de Gibrán Alcocer. 
-            Esta composición destaca por su atmósfera introspectiva y su capacidad para transmitir 
-            una profundidad emocional única, invitando al oyente a un viaje sonoro lleno de matices y sensibilidad.
+              En este video interpreto la cautivadora pieza "Idea 1" de Gibrán
+              Alcocer. Esta composición destaca por su atmósfera introspectiva y
+              su capacidad para transmitir una profundidad emocional única,
+              invitando al oyente a un viaje sonoro lleno de matices y
+              sensibilidad.
             </p>
           </div>
           {/* Columna: Video */}
@@ -564,7 +557,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 portadakoe"
+            className="relative z-10 portadas"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -581,55 +574,61 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">
-            Koe no Katachi
-            </h1>
+            <h1 className="text-5xl font-semibold mb-4">Koe no Katachi</h1>
             <h2 className="text-3xl font-semibold mb-4">
-            Interpretación de la canción de la película "A Silent Voice"
+              Interpretación de la canción de la película "A Silent Voice"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">
-            Koe no Katachi
-            </h1>
+            <h1 className="text-4xl font-semibold mb-4">Koe no Katachi</h1>
             <p className="text-xl">
-            En este video interpreto la emotiva pieza de piano de "Koe no Katachi"(A Silent Voice).
-             Esta obra, cargada de sensibilidad y profundidad, refleja a la perfección los sentimientos de conexión y 
-             redención que impregnan la historia, evocando una delicada mezcla de nostalgia y esperanza.
+              En este video interpreto la emotiva pieza de piano de "Koe no
+              Katachi"(A Silent Voice). Esta obra, cargada de sensibilidad y
+              profundidad, refleja a la perfección los sentimientos de conexión
+              y redención que impregnan la historia, evocando una delicada
+              mezcla de nostalgia y esperanza.
             </p>
           </div>
           {/* Columna: Video o Portada */}
-        <div
-          className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        >
-          {isKoePlayed ? (
-            <iframe
-              width="350"
-              height="681"
-              src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160&autoplay=1"
-              title="Koe No Katachi"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
-          ) : (
-            <div className="relative cursor-pointer" onClick={() => setIsKoePlayed(true)}>
-              <img
-  src={portadakoe}
-  alt="Portada Koe No Katachi"
-  className="portadakoe object-cover rounded-lg mx-auto"/>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 text-white" viewBox="0 0 64 64" fill="currentColor">
-                  <circle cx="32" cy="32" r="32" opacity="0.7" />
-                  <polygon points="26,20 26,44 46,32" fill="white" />
-                </svg>
+          <div
+            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            {isKoePlayed ? (
+              <iframe
+                width="350"
+                height="681"
+                src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160&autoplay=1"
+                title="Koe No Katachi"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="rounded-lg"
+              ></iframe>
+            ) : (
+              <div
+                className="relative cursor-pointer"
+                onClick={() => setIsKoePlayed(true)}
+              >
+                <img
+                  src={portadakoe}
+                  alt="Portada Koe No Katachi"
+                  className="portadas object-cover rounded-lg mx-auto"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg
+                    className="w-16 h-16 text-white"
+                    viewBox="0 0 64 64"
+                    fill="currentColor"
+                  >
+                    <circle cx="32" cy="32" r="32" opacity="0.7" />
+                    <polygon points="26,20 26,44 46,32" fill="white" />
+                  </svg>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
-      </div>
         {/* Nueva Barra para separación */}
         <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>
