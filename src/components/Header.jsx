@@ -122,7 +122,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="#contacto"
                 className="block py-2 px-3 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
               >
                 Contacto

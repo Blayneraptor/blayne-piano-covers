@@ -62,48 +62,61 @@ function ContactForm() {
 
 const App = () => {
   return (
-    <div className="bg-black text-white scroll-smooth">
+    <div className="bg-black text-white scroll-smooth overflow-x-hidden">
       <Header />
       {/* Portada grande debajo del Header */}
-      <section
-        className="relative w-full h-[950px] bg-cover bg-bottom"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1) 100%)",
-          }}
-        ></div>
-        {/* Bloque de descripción en la parte izquierda */}
-        <div
-          className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/4 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          <h1 className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]">
-            PORTFOLIO PIANO BLAYNE
-          </h1>
-          <p className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14">
-            Aquí muestro mis covers que he ido haciendo, esta página está en
-            DESARROLLO.
-          </p>
-          <div className="flex flex-wrap items-center">
-            <a
-              href="#item1"
-              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-indigo-500 shadow-lg shadow-indigo-600/50 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
-            >
-              Explorar Ahora
-            </a>
-            <a
-              href="#contacto"
-              className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600 hover:bg-blue-600"
-            >
-              Contacta Conmigo
-            </a>
-          </div>
-        </div>
+      <section className="relative w-full h-[950px] bg-cover bg-bottom overflow-hidden">
+  {/* Fondo animado */}
+  <div
+    className="absolute inset-0 animate-bg"
+    style={{ backgroundImage: `url(${bgImage})` }}
+  ></div>
+  {/* Capa para el gradiente o overlay */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%)",
+      filter: "blur(0px)",
+      opacity: 1,
+      transform: "translate(0px, 0px)"
+    }}
+  ></div>
+{/* Bloque de descripción en la parte izquierda */}
+<div className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/2 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20 animate-blur">
+  <h1
+    className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]"
+    data-aos="fade-up" // Título aparece desde la derecha
+    data-aos-duration="1000" // Duración de la animación
+  >
+    PORTFOLIO PIANO BLAYNE
+  </h1>
+  <p
+    className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14"
+    data-aos="fade-up" // Desaparece desde la derecha
+    data-aos-duration="1000"
+  >
+    Aquí muestro mis covers que he ido haciendo, esta página está en DESARROLLO.
+  </p>
+  <div className="flex flex-wrap items-center">
+    <a
+      href="#item1"
+      className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-indigo-500 shadow-lg shadow-indigo-600/50 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-blue-700"
+      data-aos="fade-up" // Desvanecimiento hacia arriba
+      data-aos-duration="1000"
+    >
+      Explorar Ahora
+    </a>
+    <a
+      href="#contacto"
+      className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600 hover:bg-blue-600"
+      data-aos="fade-up" // Desvanecimiento desde abajo
+      data-aos-duration="1000"
+    >
+      Contacta Conmigo
+    </a>
+  </div>
+</div>
+
       </section>
       {/* Barra */}
       <div id="explorar" className="mb-12 border-b border-white/10">
@@ -186,18 +199,18 @@ const App = () => {
         <div
           id="item2"
           className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
-          >
-            {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
-            <div
-              className="absolute inset-0 flex justify-center items-center pointer-events-none"
-              style={{
-                backgroundImage: `url(${fondoazul})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                opacity: 0.3,
-              }}
-            ></div>
+        >
+          {/* Overlay de fondo (fondoazul.png) con tamaño reducido y mayor opacidad */}
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none"
+            style={{
+              backgroundImage: `url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.3,
+            }}
+          ></div>
           {/* Columna: Imagen */}
           <div
             className="md:w-1/3 h-[650px]"
@@ -245,25 +258,25 @@ const App = () => {
         <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>
 
-{/* Footer con ContactForm */}
-<footer
-  id="contacto"
-  className="text-white text-center py-8"
-  style={{
-    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent), url(${bgImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
-  }}
-  
->
-  <div className="p-8">
-    <ContactForm />
-  </div>
-  <p className="text-sm">
-    &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos reservados.
-  </p>
-</footer>
+      {/* Footer con ContactForm */}
+      <footer
+        id="contacto"
+        className="text-white text-center py-8"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent), url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="p-8">
+          <ContactForm />
+        </div>
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos
+          reservados.
+        </p>
+      </footer>
     </div>
   );
 };

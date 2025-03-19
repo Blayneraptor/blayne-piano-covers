@@ -2,13 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-.custom-shape {
-    /* Ejemplo de forma personalizada con clip-path */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    border-radius: 1rem;
-  }
+
   html {
     scroll-behavior: smooth;
   }
 
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
   
+  .animate-spin-slower {
+    animation: spin 0s linear infinite;
+  }
+
+/* Animación que realiza el blur y el zoom-out inicial */
+@keyframes zoomOutBlur {
+  from {
+    transform: scale(1.2);
+    filter: blur(50px);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+/* Animación que alterna el zoom entre el 100% y el 110% */
+@keyframes zoomPan {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Aplica primero zoomOutBlur (ahora 0.3s) y luego el efecto alterno zoomPan */
+.animate-bg {
+  animation: 
+    zoomOutBlur 0.4s ease-out forwards,
+    zoomPan 20s ease-in-out infinite alternate 0.7s;
+}
+
+@keyframes blurIn {
+  from {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.animate-blur {
+  animation: blurIn 0.7s ease-out forwards;
+}
