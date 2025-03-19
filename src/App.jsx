@@ -245,33 +245,25 @@ const App = () => {
         <div id="more-items" className="my-8 border-b border-white/10"></div>
       </section>
 
-      {/* Formulario de Contacto */}
-      <section
-        id="contacto"
-        className="p-8"
-        style={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
-          backgroundSize: "100% 50%, 100% 50%, cover",
-          backgroundPosition: "top, bottom, center",
-        }}
-        data-aos="fade-up"
-      >
-        <ContactForm />
-      </section>
-      {/* Footer */}
-      <footer
-        className="text-white text-center py-8"
-        style={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.34), transparent), linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent), url(${bgImage})`,
-          backgroundSize: "100% 100%, 100% 100%, cover",
-          backgroundPosition: "top, bottom, center",
-        }}
-      >
-        <p className="text-sm">
-          &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos
-          reservados.
-        </p>
-      </footer>
+{/* Footer con ContactForm */}
+<footer
+  id="contacto"
+  className="text-white text-center py-8"
+  style={{
+    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent), url(${bgImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
+  }}
+  
+>
+  <div className="p-8">
+    <ContactForm />
+  </div>
+  <p className="text-sm">
+    &copy; {new Date().getFullYear()} Blayneraptor. Todos los derechos reservados.
+  </p>
+</footer>
     </div>
   );
 };
