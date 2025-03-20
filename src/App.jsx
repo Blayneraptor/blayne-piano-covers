@@ -50,9 +50,10 @@ function ContactForm() {
         name="email"
         placeholder="Correo electrónico"
         required
-        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         className="p-2 rounded-md bg-[#1a1a1a] text-white"
       />
+
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <textarea
         id="message"
@@ -275,7 +276,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -342,7 +343,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -355,16 +356,19 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-           
             className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-              <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Empty Core 1</h1>
-              <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Empty Core 1
+            </h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Empty Core 1"
             </h2>
-            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Empty Core 1</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Empty Core 1
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
               La canción "Empty Core 1", creada por Tomy Sauvestre, está
               inspirada en la emotiva pieza "Drowning Love". En este video,
@@ -375,12 +379,11 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            
             className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-           <VideoCover
+            <VideoCover
               videoUrl="https://player.vimeo.com/video/1029711298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               coverImage={portadaempty}
               title="Empty Core 1"
@@ -408,7 +411,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -425,25 +428,29 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Love Story</h1>
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Love Story
+            </h1>
             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Love Story"
             </h2>
-            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Love Story</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Love Story
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
-                En este video interpreto una emotiva pieza de la cantante
-                francesa Indila, "Love Story". Esta canción, incluida en su
-                álbum Mini World (2014), combina una melodía delicada con una
-                narrativa poética que evoca emociones profundas.
+              En este video interpreto una emotiva pieza de la cantante francesa
+              Indila, "Love Story". Esta canción, incluida en su álbum Mini
+              World (2014), combina una melodía delicada con una narrativa
+              poética que evoca emociones profundas.
             </p>
           </div>
           {/* Columna: Video */}
           <div
-           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-             <VideoCover
+            <VideoCover
               videoUrl="https://player.vimeo.com/video/1029706840?ts=0&share=copy"
               coverImage={portadastory}
               title="Love Story"
@@ -471,7 +478,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-          className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -488,11 +495,15 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="700"
           >
-             <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Idea 22</h1>
-             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Idea 22
+            </h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Idea 22"
             </h2>
-            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Idea 22</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Idea 22
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la cautivadora pieza "Idea 22" de Gibran
               Alcocer. Esta composición destaca por su atmósfera introspectiva y
@@ -503,11 +514,11 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-          <VideoCover
+            <VideoCover
               videoUrl="https://player.vimeo.com/video/1043432123?ts=0&share=copy"
               coverImage={portadaidea22}
               title="Idea 22"
@@ -535,7 +546,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -548,15 +559,19 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-             className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Idea 1</h1>
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Idea 1
+            </h1>
             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Idea 1"
             </h2>
-           <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Idea 1</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Idea 1
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la cautivadora pieza "Idea 1" de Gibrán
               Alcocer. Esta composición destaca por su atmósfera introspectiva y
@@ -599,7 +614,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-             className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -612,15 +627,19 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-             className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Koe no Katachi</h1>
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">
+              Koe no Katachi
+            </h1>
             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción de la película "A Silent Voice"
             </h2>
-           <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Koe no Katachi</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Koe no Katachi
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la emotiva pieza de piano de "Koe no
               Katachi"(A Silent Voice). Esta obra, cargada de sensibilidad y
