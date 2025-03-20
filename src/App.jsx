@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import bgImage from "./assets/bg3.png";
 import castilloambu from "./assets/castilloambu.jpg";
-import fondoazul from "./assets/fondoazul.png"; // Importamos el fondo azul
+import fondoazul from "./assets/fondoazul.png";
 import { useForm, ValidationError } from "@formspree/react";
 import bosque from "./assets/bosquecore.jpg";
 import nubes1 from "./assets/nubes1.jpg";
