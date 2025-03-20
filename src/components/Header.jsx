@@ -4,6 +4,7 @@ import logoBlayne from "../assets/logoblayne.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCoversHovered, setIsCoversHovered] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,8 +70,12 @@ const Header = () => {
                 Inicio
               </a>
             </li>
-            {/* Usamos group para abrir el menú al hacer hover */}
-            <li className="relative group">
+            {/* Contenedor para Covers y el dropdown sin brechas */}
+            <li
+              className="relative"
+              onMouseEnter={() => setIsCoversHovered(true)}
+              onMouseLeave={() => setIsCoversHovered(false)}
+            >
               <a
                 href="#"
                 className="flex items-center justify-between w-full py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white cursor-pointer"
@@ -92,66 +97,70 @@ const Header = () => {
                   />
                 </svg>
               </a>
-              <div className="absolute left-0 mt-2 z-10 font-normal bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-44 opacity-0 transform scale-95 transition-all duration-200 group-hover:opacity-100 group-hover:scale-100">
-                <ul className="py-2 text-sm text-white">
-                  <li>
-                    <a
-                      href="#item1"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Howl's Moving Castle
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item2"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Waltz Nº 2 Shostakóvich
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item3"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Empty Core 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item4"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Love Story Indila
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item5"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Idea 22 Gibran Alcocer
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item6"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Idea 1 Gibran Alcocer
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#item7"
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Koe no Katachi
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              {isCoversHovered && (
+                <div
+                  className="absolute left-0 top-full mt-0 z-10 font-normal bg-black divide-y divide-gray-100 rounded-lg shadow-sm w-44 opacity-100 transform scale-100 transition-all duration-200"
+                >
+                  <ul className="py-2 text-sm text-white">
+                    <li>
+                      <a
+                        href="#item1"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Howl's Moving Castle
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item2"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Waltz Nº 2 Shostakóvich
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item3"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Empty Core 1
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item4"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Love Story Indila
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item5"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Idea 22 Gibran Alcocer
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item6"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Idea 1 Gibran Alcocer
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#item7"
+                        className="block px-4 py-2 hover:bg-gray-800"
+                      >
+                        Koe no Katachi
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </li>
             <li>
               <a
@@ -164,7 +173,7 @@ const Header = () => {
             <li>
               <a
                 href="#contacto"
-                className="block py-2 px-3  transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
+                className="block py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
               >
                 Contacto
               </a>
