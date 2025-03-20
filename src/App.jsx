@@ -208,7 +208,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+            className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -243,7 +243,7 @@ const App = () => {
           </div>
           {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -252,7 +252,7 @@ const App = () => {
               coverImage={portadahowl}
               title="Howl's Moving Castle"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -276,7 +276,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -311,7 +311,7 @@ const App = () => {
           </div>
           {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -320,7 +320,7 @@ const App = () => {
               coverImage={portadawaltz}
               title="Waltz No. 2"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -343,7 +343,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -377,7 +377,7 @@ const App = () => {
           {/* Columna: Video */}
           <div
             
-            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -386,7 +386,7 @@ const App = () => {
               coverImage={portadaempty}
               title="Empty Core 1"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -409,7 +409,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -442,7 +442,7 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -451,7 +451,7 @@ const App = () => {
               coverImage={portadastory}
               title="Love Story"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -474,7 +474,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-           className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+          className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -506,7 +506,7 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -515,7 +515,7 @@ const App = () => {
               coverImage={portadaidea22}
               title="Idea 22"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -538,7 +538,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+           className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -570,7 +570,7 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -579,7 +579,7 @@ const App = () => {
               coverImage={portadaidea1} // o la imagen que corresponda
               title="Idea 1"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
@@ -602,7 +602,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-              className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
+             className="relative z-10 w-full md:w-[31%] h-[250px] md:h-[650px] pb-10 md:pb-0 md:pr-10"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -634,7 +634,7 @@ const App = () => {
           </div>
           {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
@@ -643,7 +643,7 @@ const App = () => {
               coverImage={portadakoe} // Usa la misma portada que en los otros ítems
               title="Koe No Katachi"
               width={isMobile ? "300" : "360"}
-              height={isMobile ? "500" : "650"}
+              height={isMobile ? "530" : "650"}
             />
           </div>
         </div>
