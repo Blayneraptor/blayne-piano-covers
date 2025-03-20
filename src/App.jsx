@@ -50,7 +50,7 @@ function ContactForm() {
         name="email"
         placeholder="Correo electrónico"
         required
-        pattern=".+@.+\..+"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         className="p-2 rounded-md bg-[#1a1a1a] text-white"
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
