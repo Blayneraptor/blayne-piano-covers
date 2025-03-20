@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logoBlayne from "../assets/logoblayne.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,11 +24,7 @@ const Header = () => {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
+          <img src={logoBlayne} className="h-12" alt="Logo Blayne" />
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Blayne Covers
           </span>
@@ -56,7 +53,12 @@ const Header = () => {
             />
           </svg>
         </button>
-        <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-dropdown">
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } w-full md:block md:w-auto`}
+          id="navbar-dropdown"
+        >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-transparent rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent dark:border-transparent">
             <li>
               <a
@@ -106,27 +108,42 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#item3" className="block px-4 py-2 hover:bg-gray-800">
+                    <a
+                      href="#item3"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
                       Empty Core 1
                     </a>
                   </li>
                   <li>
-                    <a href="#item4" className="block px-4 py-2 hover:bg-gray-800">
+                    <a
+                      href="#item4"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
                       Love Story Indila
                     </a>
                   </li>
                   <li>
-                    <a href="#item5" className="block px-4 py-2 hover:bg-gray-800">
+                    <a
+                      href="#item5"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
                       Idea 22 Gibran Alcocer
                     </a>
                   </li>
                   <li>
-                    <a href="#item6" className="block px-4 py-2 hover:bg-gray-800">
+                    <a
+                      href="#item6"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
                       Idea 1 Gibran Alcocer
                     </a>
                   </li>
                   <li>
-                    <a href="#item7" className="block px-4 py-2 hover:bg-gray-800">
+                    <a
+                      href="#item7"
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
                       Koe no Katachi
                     </a>
                   </li>

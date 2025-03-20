@@ -261,7 +261,6 @@ const App = () => {
         {/* Item 2 (mismo contenido que Item 1 con modificaciones en textos e imagen y video) */}
         <div
           id="item2"
-          classNam
           className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
@@ -432,12 +431,10 @@ const App = () => {
             </h2>
             <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Love Story</h1>
             <p className="hidden md:block text-base md:text-xl">
-              <p>
                 En este video interpreto una emotiva pieza de la cantante
                 francesa Indila, "Love Story". Esta canción, incluida en su
                 álbum Mini World (2014), combina una melodía delicada con una
                 narrativa poética que evoca emociones profundas.
-              </p>
             </p>
           </div>
           {/* Columna: Video */}
