@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import bgImage from "./assets/bg3.png";
 import castilloambu from "./assets/castilloambu.jpg";
@@ -11,6 +11,12 @@ import nubes2 from "./assets/nubes2.jpg";
 import nubes3 from "./assets/nubes3.jpg";
 import nubes4 from "./assets/nubes4.jpg";
 import portadakoe from "./assets/portadakoe.png";
+import portadaidea1 from "./assets/portadaidea1.png";
+import portadahowl from "./assets/portadahowl.png";
+import portadawaltz from "./assets/portadawaltz.png";
+import portadaidea22 from "./assets/portadaidea22.png";
+import portadastory from "./assets/portadastory.png";
+import portadaempty from "./assets/portadaempty.png";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xannaejy");
@@ -66,12 +72,57 @@ function ContactForm() {
     </form>
   );
 }
+const VideoCover = ({
+  videoUrl,
+  coverImage,
+  title,
+  width = "350",
+  height = "681",
+}) => {
+  const [played, setPlayed] = useState(false);
+
+  return played ? (
+    <iframe
+      width={width}
+      height={height}
+      src={videoUrl}
+      title={title}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+      className="rounded-lg"
+    ></iframe>
+  ) : (
+    <div className="relative cursor-pointer" onClick={() => setPlayed(true)}>
+      <img
+        src={coverImage}
+        alt={title}
+        className="portadas object-cover rounded-lg mx-auto"
+      />
+      <div className="absolute inset-0 flex items-center justify-center">
+        <svg
+          className="w-16 h-16 text-white"
+          viewBox="0 0 64 64"
+          fill="currentColor"
+        >
+          <circle cx="32" cy="32" r="32" opacity="0.7" />
+          <polygon points="26,20 26,44 46,32" fill="white" />
+        </svg>
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
-  // Ahora openImage almacena la ruta de la imagen seleccionada o null
   const [openImage, setOpenImage] = useState(null);
-  const [isKoePlayed, setIsKoePlayed] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className="bg-black text-white scroll-smooth overflow-x-hidden">
       <Header />
@@ -190,21 +241,19 @@ const App = () => {
               un mundo mágico lleno de aventuras.
             </p>
           </div>
-          {/* Columna: Video */}
+          {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 md:w-1/3 h-[550px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
-            data-aos="fade-left"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+            <VideoCover
+              videoUrl="https://player.vimeo.com/video/1029603232?h=2ae60bac1d"
+              coverImage={portadahowl}
+              title="Howl's Moving Castle"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -212,7 +261,8 @@ const App = () => {
         {/* Item 2 (mismo contenido que Item 1 con modificaciones en textos e imagen y video) */}
         <div
           id="item2"
-          classNam className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
+          classNam
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -249,7 +299,9 @@ const App = () => {
             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Waltz No. 2"
             </h2>
-            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Waltz No.2</h1>
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">
+              Waltz No.2
+            </h1>
             <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la icónica "Waltz No. 2" de Dmitri
               Shostakovich. Esta obra, conocida por su inconfundible mezcla de
@@ -257,23 +309,19 @@ const App = () => {
               emocional característica del compositor.
             </p>
           </div>
-          {/* Columna: Video */}
+          {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 md:w-1/3 h-[300px] md:h-[650px] p-0 m-0 ml-0 md:ml-4"
-            data-aos="fade-left"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
+            data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <iframe
-              width="370"
-              height="661"
-              src="https://www.youtube.com/embed/1WghDkHuIjc?vq=hd2160"
-              title="Waltz No. 2 Shostakóvich Cover Piano"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+            <VideoCover
+              videoUrl="https://www.youtube.com/embed/1WghDkHuIjc?vq=hd2160"
+              coverImage={portadawaltz}
+              title="Waltz No. 2"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -281,7 +329,7 @@ const App = () => {
         {/* Item 3 */}
         <div
           id="item3"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -295,7 +343,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -308,16 +356,17 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+           
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Empty Core 1</h1>
-            <h2 className="text-3xl font-semibold mb-4">
+              <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Empty Core 1</h1>
+              <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Empty Core 1"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Empty Core 1</h1>
-            <p className="text-xl">
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Empty Core 1</h1>
+            <p className="hidden md:block text-base md:text-xl">
               La canción "Empty Core 1", creada por Tomy Sauvestre, está
               inspirada en la emotiva pieza "Drowning Love". En este video,
               interpreto el estribillo de esta composición única, que captura la
@@ -327,19 +376,18 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 md:w-1/3 h-[670px] p-0 m-0 ml-4"
+            
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1029711298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              width="90%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+           <VideoCover
+              videoUrl="https://player.vimeo.com/video/1029711298?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              coverImage={portadaempty}
+              title="Empty Core 1"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -347,7 +395,7 @@ const App = () => {
         {/* Item 4 */}
         <div
           id="item4"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -361,7 +409,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -374,16 +422,16 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Love Story</h1>
-            <h2 className="text-3xl font-semibold mb-4">
-              Interpretación de la canción "Love Story"fe"
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Love Story</h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
+              Interpretación de la canción "Love Story"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Love Story</h1>
-            <p className="text-xl">
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Love Story</h1>
+            <p className="hidden md:block text-base md:text-xl">
               <p>
                 En este video interpreto una emotiva pieza de la cantante
                 francesa Indila, "Love Story". Esta canción, incluida en su
@@ -394,19 +442,17 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1029706840?ts=0&share=copy"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+             <VideoCover
+              videoUrl="https://player.vimeo.com/video/1029706840?ts=0&share=copy"
+              coverImage={portadastory}
+              title="Love Story"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -414,7 +460,7 @@ const App = () => {
         {/* Item 5 */}
         <div
           id="item5"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -428,7 +474,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+           className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -441,16 +487,16 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Idea 22</h1>
-            <h2 className="text-3xl font-semibold mb-4">
+             <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Idea 22</h1>
+             <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Idea 22"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Idea 22</h1>
-            <p className="text-xl">
+            <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Idea 22</h1>
+            <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la cautivadora pieza "Idea 22" de Gibran
               Alcocer. Esta composición destaca por su atmósfera introspectiva y
               su capacidad para transmitir una profundidad emocional única,
@@ -460,19 +506,17 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+           className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1043432123?ts=0&share=copy"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+          <VideoCover
+              videoUrl="https://player.vimeo.com/video/1043432123?ts=0&share=copy"
+              coverImage={portadaidea22}
+              title="Idea 22"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -480,7 +524,7 @@ const App = () => {
         {/* Item 6 */}
         <div
           id="item6"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -494,7 +538,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px]"
+            className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -507,16 +551,16 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8"
+             className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Idea 1</h1>
-            <h2 className="text-3xl font-semibold mb-4">
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Idea 1</h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción "Idea 1"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Idea 1</h1>
-            <p className="text-xl">
+           <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Idea 1</h1>
+            <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la cautivadora pieza "Idea 1" de Gibrán
               Alcocer. Esta composición destaca por su atmósfera introspectiva y
               su capacidad para transmitir una profundidad emocional única,
@@ -526,19 +570,17 @@ const App = () => {
           </div>
           {/* Columna: Video */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/1043437260?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              width="100%"
-              height="100%"
-              frameBorder="0"
-              allowFullScreen
-              className="rounded-lg"
-            ></iframe>
+            <VideoCover
+              videoUrl="https://player.vimeo.com/video/1043437260?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              coverImage={portadaidea1} // o la imagen que corresponda
+              title="Idea 1"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
@@ -546,7 +588,7 @@ const App = () => {
         {/* Item 7 */}
         <div
           id="item7"
-          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-8"
+          className="relative scroll-mt-[215px] my-12 flex flex-col md:flex-row items-center justify-evenly md:space-x-4 ml-0 md:ml-8"
         >
           {/* Overlay de fondo (fondoazul.png) con efecto de entrada */}
           <div
@@ -560,7 +602,7 @@ const App = () => {
           ></div>
           {/* Columna: Imagen */}
           <div
-            className="relative z-10 portadas"
+              className="relative z-10 w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0"
             data-aos="fade-right"
             data-aos-duration="1000"
           >
@@ -573,16 +615,16 @@ const App = () => {
           </div>
           {/* Columna: Descripción */}
           <div
-            className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-8 pl-20"
+             className="relative z-10 md:w-1/3 flex flex-col justify-center items-center text-center px-4 md:px-8 pb-6"
             data-aos="fade-up"
             data-aos-duration="700"
           >
-            <h1 className="text-5xl font-semibold mb-4">Koe no Katachi</h1>
-            <h2 className="text-3xl font-semibold mb-4">
+            <h1 className="text-2xl md:text-5xl font-semibold mb-2 md:mb-4">Koe no Katachi</h1>
+            <h2 className="text-lg md:text-3xl font-semibold mb-2 md:mb-4">
               Interpretación de la canción de la película "A Silent Voice"
             </h2>
-            <h1 className="text-4xl font-semibold mb-4">Koe no Katachi</h1>
-            <p className="text-xl">
+           <h1 className="text-xl md:text-4xl font-semibold mb-2 md:mb-4">Koe no Katachi</h1>
+            <p className="hidden md:block text-base md:text-xl">
               En este video interpreto la emotiva pieza de piano de "Koe no
               Katachi"(A Silent Voice). Esta obra, cargada de sensibilidad y
               profundidad, refleja a la perfección los sentimientos de conexión
@@ -592,44 +634,17 @@ const App = () => {
           </div>
           {/* Columna: Video o Portada */}
           <div
-            className="relative z-10 md:w-1/3 h-[650px] p-0 m-0 ml-4"
+            className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
-            {isKoePlayed ? (
-              <iframe
-                width="350"
-                height="681"
-                src="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160&autoplay=1"
-                title="Koe No Katachi"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="rounded-lg"
-              ></iframe>
-            ) : (
-              <div
-                className="relative cursor-pointer"
-                onClick={() => setIsKoePlayed(true)}
-              >
-                <img
-                  src={portadakoe}
-                  alt="Portada Koe No Katachi"
-                  className="portadas object-cover rounded-lg mx-auto"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    className="w-16 h-16 text-white"
-                    viewBox="0 0 64 64"
-                    fill="currentColor"
-                  >
-                    <circle cx="32" cy="32" r="32" opacity="0.7" />
-                    <polygon points="26,20 26,44 46,32" fill="white" />
-                  </svg>
-                </div>
-              </div>
-            )}
+            <VideoCover
+              videoUrl="https://www.youtube.com/embed/mh-0zVAUNx4?vq=hd2160&autoplay=1"
+              coverImage={portadakoe} // Usa la misma portada que en los otros ítems
+              title="Koe No Katachi"
+              width={isMobile ? "300" : "360"}
+              height={isMobile ? "500" : "650"}
+            />
           </div>
         </div>
         {/* Nueva Barra para separación */}
