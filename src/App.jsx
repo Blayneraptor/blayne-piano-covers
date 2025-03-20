@@ -451,7 +451,7 @@ const App = () => {
             </h2>
             <h1 className="text-4xl font-semibold mb-4">Idea 22</h1>
             <p className="text-xl">
-              En este video interpreto la cautivadora pieza "Idea 22" de Gibrán
+              En este video interpreto la cautivadora pieza "Idea 22" de Gibran
               Alcocer. Esta composición destaca por su atmósfera introspectiva y
               su capacidad para transmitir una profundidad emocional única,
               invitando al oyente a un viaje sonoro lleno de matices y
