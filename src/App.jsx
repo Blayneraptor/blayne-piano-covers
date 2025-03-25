@@ -81,10 +81,26 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
   return (
     <div
       className="w-full sm:w-1/2 lg:w-1/3 mb-4 cursor-pointer"
+      data-aos="fade-up"
+      data-aos-duration="1000"
       onClick={() => setSound(true)}
     >
       <div className="relative h-full flex flex-col justify-between rounded overflow-hidden">
-        <div className="relative group">
+        {/* Overlay de fondo con animación fadeIn, similar a item7 */}
+        <div
+          className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+          style={{
+            backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+        <div
+          className="relative group"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <img
             className="my-4 w-full"
             src={coverImage}
@@ -103,7 +119,13 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
             className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
           ></iframe>
         </div>
-        <h5 className="py-3 mb-0 text-center text-lg font-bold uppercase tracking-wider text-white drop-shadow-lg">{title}</h5>
+        <h5
+          className="py-3 mb-0 text-center text-lg font-bold uppercase tracking-wider text-white drop-shadow-lg"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          {title}
+        </h5>
       </div>
     </div>
   );
@@ -347,7 +369,7 @@ const App = () => {
           {/* Columna: Video o Portada */}
           <div
             className="relative z-10 portadas w-full md:w-1/3 h-[250px] md:h-[650px] pb-10 md:pb-0 mx-auto md:pl-16"
-             data-aos="fade-left"
+            data-aos="fade-left"
             data-aos-duration="1000"
           >
             <VideoCover
@@ -699,10 +721,10 @@ const App = () => {
           </div>
         </div>
         {/* Nueva Barra para separación */}
-        <div  id="proximamente" className="my-8 border-b border-white/10"></div>
+        <div id="proximamente" className="my-8 border-b border-white/10"></div>
       </section>
       <section
-        className="py-12" 
+        className="py-12"
         style={{
           backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.9) 100%), url(${fondoazul3})`,
           backgroundSize: "contain",
@@ -710,34 +732,38 @@ const App = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="flex justify-center " >
-          
-          <div className="w-full lg:w-9/12 text-center data">
-            <h2 className="text-4xl font-bold mb-4">Próximamente</h2>
+        <div className="flex justify-center ">
+          <div
+            className="w-full lg:w-9/12 text-center data"
+            data-aos="fade-up"
+            y
+            data-aos-duration="1000"
+          >
+            <h2 className="text-5xl font-bold mb-4">Próximamente</h2>
             <p className="text-lg leading-relaxed mb-0">
               Covers que estarán disponibles próximamente. ¡Mantente atento!
             </p>
           </div>
         </div>
-        
-        <div className="flex flex-wrap justify-center mt-6 max-w-screen-2xl mx-auto p-4 gap-10 " >
+
+        <div className="flex flex-wrap justify-center mt-6 max-w-screen-2xl mx-auto p-4 gap-10 ">
           {/* Ítem 1: The Benoni */}
           <VideoItem
             coverImage="https://i.ytimg.com/vi/vBfmQ2RJChE/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBM_nciM-6q-CNnwZv6kw9mqF1RSA"
             videoUrl="https://www.youtube.com/embed/vBfmQ2RJChE?autoplay=1&controls=0&loop=1&playlist=vBfmQ2RJChE"
-            title="The Benoni-Joshua Kyan Aalampour"
+            title="The Benoni - Joshua Kyan Aalampour"
           />
           {/* Ítem 2: Empty Core 7-Tomy Sauvestre */}
           <VideoItem
             coverImage="https://i.ytimg.com/vi/Pl_iurD2mDg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDbpfgoyFtEFM-ljYDloFLAw4AlXg"
             videoUrl="https://www.youtube.com/embed/Pl_iurD2mDg?autoplay=1&controls=0&loop=1&playlist=Pl_iurD2mDg"
-            title="Empty Core 7-Tomy Sauvestre"
+            title="Empty Core 7 - Tomy Sauvestre"
           />
-          {/* Ítem 3: Drowning Love- Cover Erena */}
+          {/* Ítem 3: Cordelia - Juan Arenosa */}
           <VideoItem
-            coverImage="https://i.ytimg.com/vi/9yjWC45fAg8/hq720.jpg?sqp=-oaymwFBCNAFEJQDSFryq4qpAzMIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB8AEB-AHIB4AC0AWKAgwIABABGHIgTShFMA8=&rs=AOn4CLBkd4GIi7o4FV-fcIwEgt8RO9gx1g"
-            videoUrl="https://www.youtube.com/embed/9yjWC45fAg8?autoplay=1&controls=0&loop=1&playlist=9yjWC45fAg8"
-            title="Drowning Love- Cover Erena"
+            coverImage="https://i.ytimg.com/vi/YMhOEQ4B4xg/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD7ysY0lZCeCk65w1RbuDHRk8hZOQ"
+            videoUrl="https://www.youtube.com/embed/YMhOEQ4B4xg?autoplay=1&controls=0&loop=1&playlist=YMhOEQ4B4xg"
+            title="Cordelia - Juan Arenosa"
           />
         </div>
       </section>

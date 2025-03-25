@@ -25,7 +25,7 @@ const Header = () => {
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={logoBlayne} className="h-12" alt="Logo Blayne" />
+          <img src={logoBlayne} className="h-10 w-10" alt="Logo Blayne" />
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Blayne Covers
           </span>
