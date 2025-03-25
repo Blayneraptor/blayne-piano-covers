@@ -116,19 +116,25 @@ const Header = () => {
                 }`}
               >
                 <ul className="py-2 text-sm text-white">
-                  <li>
-                    <a
-                      href="#item1"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block px-4 py-2 hover:bg-gray-800"
-                    >
-                      Howl's Moving Castle
-                    </a>
-                  </li>
+                <li>
+  <a
+    href="#item1"
+    onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
+    className="block px-4 py-2 hover:bg-gray-800"
+  >
+    Howl's Moving Castle
+  </a>
+</li>
                   <li>
                     <a
                       href="#item2"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Waltz Nº 2 Shostakóvich
@@ -137,7 +143,10 @@ const Header = () => {
                   <li>
                     <a
                       href="#item3"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Empty Core 1
@@ -146,7 +155,10 @@ const Header = () => {
                   <li>
                     <a
                       href="#item4"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Love Story Indila
@@ -155,7 +167,10 @@ const Header = () => {
                   <li>
                     <a
                       href="#item5"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Idea 22 Gibran Alcocer
@@ -164,7 +179,10 @@ const Header = () => {
                   <li>
                     <a
                       href="#item6"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Idea 1 Gibran Alcocer
@@ -173,7 +191,10 @@ const Header = () => {
                   <li>
                     <a
                       href="#item7"
-                      onClick={() => setIsMenuOpen(false)}
+                      onClick={() => {
+      setIsCoversHovered(false);
+      setIsMenuOpen(false);
+    }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Koe no Katachi
