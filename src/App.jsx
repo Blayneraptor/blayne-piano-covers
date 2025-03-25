@@ -87,7 +87,7 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
   const hideOverlayTitles = [
     "The Benoni - Joshua Kyan Aalampour",
     "Empty Core 7 - Tomy Sauvestre",
-    "Cordelia - Juan Arenosa"
+    "Cordelia - Juan Arenosa",
   ];
 
   return (
@@ -124,13 +124,15 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
               transform: "translate(0px, 0px)",
             }}
           />
-         <iframe
-    key={`video-${sound}`}
-    src={computedUrl}
-    frameBorder="0"
-    allow="autoplay; encrypted-media"
-    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${sound ? "opacity-100" : "group-hover:opacity-100"}`}
-></iframe>
+          <iframe
+            key={`video-${sound}`}
+            src={computedUrl}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
+              sound ? "opacity-100" : "group-hover:opacity-100"
+            }`}
+          ></iframe>
         </div>
         <h5
           className="py-3 mb-0 text-center text-lg font-bold uppercase tracking-wider text-white"
