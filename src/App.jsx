@@ -78,24 +78,33 @@ function ContactForm() {
 const VideoItem = ({ coverImage, videoUrl, title }) => {
   const [sound, setSound] = useState(false);
   const computedUrl = `${videoUrl}${sound ? "" : "&mute=0"}`;
+  // Lista de items en los que NO queremos mostrar el overlay
+  const hideOverlayTitles = [
+    "The Benoni - Joshua Kyan Aalampour",
+    "Empty Core 7 - Tomy Sauvestre",
+    "Cordelia - Juan Arenosa"
+  ];
+
   return (
     <div
-      className="w-full sm:w-1/2 lg:w-1/3 mb-4 cursor-pointer"
+      className="w-full sm:w-1/2 lg:w-1/3 mb-4"
       data-aos="fade-up"
       data-aos-duration="1000"
       onClick={() => setSound(true)}
     >
       <div className="relative h-full flex flex-col justify-between rounded overflow-hidden">
-        {/* Overlay de fondo con animación fadeIn, similar a item7 */}
-        <div
-          className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
-          style={{
-            backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
+        {/* Condicionalmente renderizamos el overlay si el title no coincide */}
+        {!hideOverlayTitles.includes(title) && (
+          <div
+            className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
+            style={{
+              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+        )}
         <div
           className="relative group"
           data-aos="fade-up"
@@ -120,7 +129,7 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
           ></iframe>
         </div>
         <h5
-          className="py-3 mb-0 text-center text-lg font-bold uppercase tracking-wider text-white drop-shadow-lg"
+          className="py-3 mb-0 text-center text-lg font-bold uppercase tracking-wider text-white"
           data-aos="fade-left"
           data-aos-duration="1000"
         >
