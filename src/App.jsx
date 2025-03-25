@@ -77,8 +77,13 @@ function ContactForm() {
 
 const VideoItem = ({ coverImage, videoUrl, title }) => {
   const [sound, setSound] = useState(false);
-  const computedUrl = `${videoUrl}${sound ? "" : "&mute=0"}`;
-  // Lista de items en los que NO queremos mostrar el overlay
+
+  // Si sound es false, cambiamos autoplay a 0; si es true, dejamos autoplay=1.
+  const computedUrl = sound
+    ? videoUrl
+    : videoUrl.replace(/autoplay=1/, "autoplay=0");
+
+  // Lista de items en los que NO queremos overlay
   const hideOverlayTitles = [
     "The Benoni - Joshua Kyan Aalampour",
     "Empty Core 7 - Tomy Sauvestre",
@@ -93,7 +98,6 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
       onClick={() => setSound(true)}
     >
       <div className="relative h-full flex flex-col justify-between rounded overflow-hidden">
-        {/* Condicionalmente renderizamos el overlay si el title no coincide */}
         {!hideOverlayTitles.includes(title) && (
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
