@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import logoBlayne from "../assets/logoblayne.png";
 
 const Header = () => {
@@ -6,6 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCoversHovered, setIsCoversHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 0);
@@ -19,8 +20,26 @@ const Header = () => {
     };
   }, []);
 
+  // Cerrar menú si se hace clic fuera en modo móvil
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isMobile &&
+        isMenuOpen &&
+        headerRef.current &&
+        !headerRef.current.contains(event.target)
+      ) {
+        setIsMenuOpen(false);
+        setIsCoversHovered(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [isMobile, isMenuOpen]);
+
   return (
     <nav
+      ref={headerRef}
       className={`fixed top-0 left-0 right-0 z-50 border-gray-200 transition-all duration-1000 dark:border-gray-700 ${
         isScrolled
           ? "bg-black bg-opacity-0 backdrop-blur-md"
@@ -59,17 +78,22 @@ const Header = () => {
           </svg>
         </button>
         <div
-          className={`${
-            isMenuOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto`}
           id="navbar-dropdown"
+          className={`w-full ${
+            isMobile
+              ? `${
+                  isCoversHovered ? "overflow-visible" : "overflow-hidden"
+                } transition-all duration-600 ease-in-out ` +
+                (isMenuOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0")
+              : "block md:block md:w-auto"
+          }`}
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-transparent rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent dark:border-transparent">
             <li>
               <a
                 href="#"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 px-3 text-white bg-transparent rounded-sm transition transform duration-300  hover:bg-gray-900 hover:scale-110 md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-transparent md:dark:bg-transparent"
+                className="block py-2 px-3 text-white bg-transparent rounded-sm transition transform duration-300 hover:scale-110 md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                 aria-current="page"
               >
                 Inicio
@@ -116,25 +140,25 @@ const Header = () => {
                 }`}
               >
                 <ul className="py-2 text-sm text-white">
-                <li>
-  <a
-    href="#item1"
-    onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
-    className="block px-4 py-2 hover:bg-gray-800"
-  >
-    Howl's Moving Castle
-  </a>
-</li>
+                  <li>
+                    <a
+                      href="#item1"
+                      onClick={() => {
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
+                      className="block px-4 py-2 hover:bg-gray-800"
+                    >
+                      Howl's Moving Castle
+                    </a>
+                  </li>
                   <li>
                     <a
                       href="#item2"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Waltz Nº 2 Shostakóvich
@@ -144,9 +168,9 @@ const Header = () => {
                     <a
                       href="#item3"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Empty Core 1
@@ -156,9 +180,9 @@ const Header = () => {
                     <a
                       href="#item4"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Love Story Indila
@@ -168,9 +192,9 @@ const Header = () => {
                     <a
                       href="#item5"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Idea 22 Gibran Alcocer
@@ -180,9 +204,9 @@ const Header = () => {
                     <a
                       href="#item6"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Idea 1 Gibran Alcocer
@@ -192,9 +216,9 @@ const Header = () => {
                     <a
                       href="#item7"
                       onClick={() => {
-      setIsCoversHovered(false);
-      setIsMenuOpen(false);
-    }}
+                        setIsCoversHovered(false);
+                        setIsMenuOpen(false);
+                      }}
                       className="block px-4 py-2 hover:bg-gray-800"
                     >
                       Koe no Katachi

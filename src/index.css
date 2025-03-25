@@ -48,7 +48,7 @@
 .animate-bg {
   animation: 
     zoomOutBlur 0.4s ease-out forwards,
-    zoomPan 20s ease-in-out infinite alternate 0.7s;
+    zoomPan 10s ease-in-out infinite alternate 0.7s;
 }
 
 @keyframes blurIn {
