@@ -232,8 +232,7 @@ const App = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Aquí muestro mis covers que he ido haciendo, esta página está en
-            DESARROLLO.
+            Lista de covers que he ido consiguiendo a lo largo de mi aprendizaje con el piano.
           </p>
           <div className="flex flex-wrap items-center">
             <a
