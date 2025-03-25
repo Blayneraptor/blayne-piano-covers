@@ -78,15 +78,17 @@ const Header = () => {
           </svg>
         </button>
         <div
-  id="navbar-dropdown"
-  className={`w-full ${
-    isMobile
-      ? `${
-          isCoversHovered ? "overflow-visible" : "overflow-hidden"
-        } transition-all duration-500 ease-in-out ` +
-        (isMenuOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0")
-      : "block md:block md:w-auto"
-  }`}
+          id="navbar-dropdown"
+          className={`w-full ${
+            isMobile
+              ? `${
+                  isCoversHovered ? "overflow-visible" : "overflow-hidden"
+                } transition-all duration-500 ease-in-out ` +
+                (isMenuOpen
+                  ? "max-h-[1000px] opacity-100"
+                  : "max-h-0 opacity-0")
+              : "block md:block md:w-auto"
+          }`}
         >
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-transparent rounded-lg bg-transparent md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-transparent md:dark:bg-transparent dark:border-transparent">
             <li>

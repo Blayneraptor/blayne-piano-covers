@@ -221,18 +221,19 @@ const App = () => {
         {/* Bloque de descripción en la parte izquierda */}
         <div className="absolute left-5 md:left-20 lg:left-40 xl:left-60 2xl:left-80 top-1/2 transform -translate-y-1/2 mb-12 max-w-[570px] p-6 bg-black bg-opacity-0 rounded-lg shadow-lg z-20 animate-blur">
           <h1
-            className="mb-4 text-[40px] font-bold leading-tight text-white md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]"
+            className="mb-4 text-[40px] font-bold leading-tight text-white font-display md:text-[50px] lg:text-[40px] xl:text-[46px] 2xl:text-[50px] sm:text-[46px]"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            PORTFOLIO PIANO BLAYNE
+            PORTFOLIO PIANO JOSE P. COUSO
           </h1>
           <p
             className="mb-8 text-lg font-medium leading-relaxed text-white md:pr-14"
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Lista de covers que he ido consiguiendo a lo largo de mi aprendizaje con el piano.
+            Lista de interpretaciones que he aprendido a lo largo de mi
+            trayectoria con el piano.
           </p>
           <div className="flex flex-wrap items-center">
             <a

@@ -8,6 +8,9 @@ module.exports = {
       maxWidth: {
         '8xl': '90rem', // 1440px, por ejemplo
     },
+    fontFamily: {
+      display: ['"Gilda Display"', 'serif'],
+    },
   },
   plugins: [],
 }
