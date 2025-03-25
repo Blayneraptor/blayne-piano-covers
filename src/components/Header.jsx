@@ -64,7 +64,7 @@ const Header = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-white bg-transparent rounded-sm transition transform duration-300 hover:scale-110 md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-transparent md:dark:bg-transparent"
+                className="block py-2 px-3 text-white bg-transparent rounded-sm transition transform duration-300  hover:bg-gray-900 hover:scale-110 md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-transparent md:dark:bg-transparent"
                 aria-current="page"
               >
                 Inicio
@@ -78,7 +78,7 @@ const Header = () => {
             >
               <a
                 href="#"
-                className="flex items-center justify-between w-full py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white cursor-pointer"
+                className="flex items-center justify-between w-full py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-900 md:hover:bg-transparent md:border-0 md:p-0 md:w-auto text-white cursor-pointer"
               >
                 Covers{" "}
                 <svg
@@ -167,7 +167,7 @@ const Header = () => {
             <li>
               <a
                 href="#proximamente"
-                className="block py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
+                className="block py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-900 md:hover:bg-transparent md:border-0 md:p-0 text-white"
               >
                 Próximamente
               </a>
@@ -175,7 +175,7 @@ const Header = () => {
             <li>
               <a
                 href="#contacto"
-                className="block py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white"
+                className="block py-2 px-3 transition transform duration-300 hover:scale-110 bg-transparent rounded-sm hover:bg-gray-900 md:hover:bg-transparent md:border-0 md:p-0 text-white"
               >
                 Contacto
               </a>

@@ -257,7 +257,7 @@ const App = () => {
       </div>
 
       {/* Grid en columna única para descripción, imagen y video */}
-      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[200px] p-8 justify-items-center">
+      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-[20px] p-4 justify-items-center">
         {/* Item 1 */}
         <div
           id="item1"
