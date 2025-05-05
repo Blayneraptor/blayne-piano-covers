@@ -102,7 +102,7 @@ const VideoItem = ({ coverImage, videoUrl, title }) => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `radial-gradient(circle at center, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%), url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -273,10 +273,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -340,10 +342,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -407,10 +411,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -475,10 +481,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -542,10 +550,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -610,10 +620,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -678,10 +690,12 @@ const App = () => {
           <div
             className="absolute inset-0 flex justify-center items-center pointer-events-none animate-fadeIn"
             style={{
-              backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%), url(${fondoazul})`,
+              backgroundImage: `url(${fondoazul})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              filter: "brightness(0.7) contrast(1.2)",
+              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
             }}
           ></div>
           {/* Columna: Imagen */}
