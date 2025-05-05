@@ -277,8 +277,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -346,8 +347,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -415,8 +417,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -485,8 +488,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -554,8 +558,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -624,8 +629,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -694,8 +700,9 @@ const App = () => {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              filter: "brightness(0.7) contrast(1.2)",
-              boxShadow: "inset 0 0 50px 30px rgba(0,0,0,0.9)",
+              filter: "brightness(0.9) contrast(1.1)",
+              boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+              borderRadius: "50%"
             }}
           ></div>
           {/* Columna: Imagen */}
@@ -755,10 +762,13 @@ const App = () => {
       <section
         className="py-12"
         style={{
-          backgroundImage: `radial-gradient(ellipse at center, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.9) 100%), url(${fondoazul3})`,
+          backgroundImage: `url(${fondoazul3})`,
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+          filter: "brightness(0.9) contrast(1.1)",
+          boxShadow: "inset 0 0 100px 90px rgba(0,0,0,0.9)",
+          borderRadius: "50%"
         }}
       >
         <div className="flex justify-center ">
