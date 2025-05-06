@@ -30,7 +30,7 @@ function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold mb-2 text-blue-400">¡Mensaje enviado con éxito!</h3>
+        <h3 className="text-xl font-semibold mb-2 text-green-400">¡Mensaje enviado con éxito!</h3>
         <p className="text-gray-300">Gracias por contactarme. Te responderé lo antes posible.</p>
       </div>
     );
@@ -39,9 +39,9 @@ function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="relative max-w-md mx-auto p-6 md:p-8 rounded-2xl bg-gray-900/40 backdrop-blur-sm shadow-xl shadow-blue-900/10 border border-white/5"
+      className="relative max-w-md mx-auto p-6 md:p-8 rounded-2xl bg-gray-900/40 backdrop-blur-sm shadow-xl shadow-green-900/10 border border-white/5"
     >
-      <h2 className="text-2xl font-semibold mb-6 text-center bg-gradient-to-r from-blue-400 to-cyan-300 text-transparent bg-clip-text">
+      <h2 className="text-2xl font-semibold mb-6 text-center bg-gradient-to-r from-green-400 to-green-300 text-transparent bg-clip-text">
         Contacta conmigo
       </h2>
       
@@ -50,7 +50,7 @@ function ContactForm() {
       
       <div className="space-y-4 relative z-10">
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-blue-400">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-green-400">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
@@ -61,12 +61,12 @@ function ContactForm() {
             name="nombre"
             placeholder="Nombre"
             required
-            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/40 text-white placeholder-gray-400 transition-all duration-300"
+            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/40 text-white placeholder-gray-400 transition-all duration-300"
           />
         </div>
         
         <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-blue-400">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-green-400">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -78,13 +78,13 @@ function ContactForm() {
             placeholder="Correo electrónico"
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/40 text-white placeholder-gray-400 transition-all duration-300"
+            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/40 text-white placeholder-gray-400 transition-all duration-300"
           />
         </div>
         <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 text-sm" />
         
         <div className="relative">
-          <div className="absolute top-3 left-0 flex items-start pl-3 pointer-events-none text-blue-400">
+          <div className="absolute top-3 left-0 flex items-start pl-3 pointer-events-none text-green-400">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
@@ -95,7 +95,7 @@ function ContactForm() {
             placeholder="Tu mensaje"
             required
             rows="4"
-            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500/40 text-white placeholder-gray-400 transition-all duration-300"
+            className="w-full pl-10 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500/40 text-white placeholder-gray-400 transition-all duration-300"
           ></textarea>
         </div>
         <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-sm" />
@@ -103,12 +103,12 @@ function ContactForm() {
         <button
           type="submit"
           disabled={state.submitting}
-          className="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-500 hover:to-blue-700 rounded-lg text-white font-medium transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed relative overflow-hidden group"
+          className="w-full py-3 px-6 bg-gradient-to-r from-green-800 to-green-950 hover:from-green-700 hover:to-green-900 rounded-lg text-white font-medium transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed relative overflow-hidden group"
         >
           <span className="relative z-10">
             {state.submitting ? "Enviando..." : "Enviar mensaje"}
           </span>
-          <span className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+          <span className="absolute inset-0 h-full w-full bg-gradient-to-r from-green-600 to-green-800 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
         </button>
       </div>
     </form>
@@ -278,7 +278,7 @@ const App = () => {
           <div className="flex flex-wrap items-center">
             <a
               href="#item1"
-              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-blue-900 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-slate-900"
+              className="mr-5 mb-5 inline-flex items-center justify-center rounded-md bg-green-900 py-3 px-7 text-base font-semibold text-white transition-all hover:bg-slate-900"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -286,7 +286,7 @@ const App = () => {
             </a>
             <a
               href="#contacto"
-              className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-blue-600"
+              className="mb-5 inline-flex items-center justify-center rounded-md border-2 border-white py-3 px-7 text-base font-semibold text-white transition-all hover:border-green-700"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -912,7 +912,7 @@ const App = () => {
           </div>
           
           <p className="text-sm text-gray-300">
-            &copy; {new Date().getFullYear()} <span className="font-semibold text-blue-400">Blayneraptor</span>. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} <span className="font-semibold text-green-400">Blayneraptor</span>. Todos los derechos reservados.
           </p>
           
          
