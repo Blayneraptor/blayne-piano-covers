@@ -31,7 +31,7 @@ function ContactForm() {
           </svg>
         </div>
         <h3 className="text-xl font-semibold mb-2 text-blue-400">¡Mensaje enviado con éxito!</h3>
-        <p className="text-gray-300">Gracias por contactarme. Te responderé lo antes posible.</p>
+        <p className="text-gray-300">Gracias por contactarme. ¡Te responderé lo antes posible!</p>
       </div>
     );
   }
