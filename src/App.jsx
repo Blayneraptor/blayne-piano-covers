@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import bgImage from "./assets/bg3.png";
 import castilloambu from "./assets/castilloambu.jpg";
 import fondoazul from "./assets/fondoazul.png";
+import { useForm, ValidationError } from "@formspree/react";
 import bosque from "./assets/bosquecore.jpg";
 import nubes1 from "./assets/nubes1.jpg";
 import bosquehielo from "./assets/bosquehielo.jpg";
@@ -19,46 +20,11 @@ import portadaempty from "./assets/portadaempty.png";
 import fondoazul3 from "./assets/fondoazul3.png";
 
 function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setError(null);
-    
-    const formData = new FormData(e.target);
-    
-    try {
-      // Usando la API directa de Formspree con el correo como endpoint
-      const response = await fetch("https://formspree.io/f/cousowebs@gmail.com", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-      
-      if (response.ok) {
-        setSubmitted(true);
-        e.target.reset();
-      } else {
-        const data = await response.json();
-        setError(data.error || "Ocurrió un error al enviar el formulario");
-      }
-    } catch (err) {
-      setError("No se pudo conectar con el servidor. Por favor, intenta de nuevo más tarde.");
-      console.error("Error de formulario:", err);
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  if (submitted) {
+  const [state, handleSubmit] = useForm("xannaejy");
+  if (state.succeeded) {
     return (
       <p className="text-white text-center animate-pulse transition-opacity duration-500">
-        Mensaje enviado correctamente
+        Mensaje enviado
       </p>
     );
   }
@@ -71,11 +37,6 @@ function ContactForm() {
       <h2 className="text-white text-center text-2xl font-semibold mb-4">
         Contacta conmigo
       </h2>
-      {error && (
-        <div className="bg-red-600 bg-opacity-70 text-white p-3 rounded-md mb-4">
-          {error}
-        </div>
-      )}
       <input
         id="nombre"
         type="text"
@@ -93,6 +54,8 @@ function ContactForm() {
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
         className="p-2 rounded-md bg-[#1a1a1a] text-white"
       />
+
+      <ValidationError prefix="Email" field="email" errors={state.errors} />
       <textarea
         id="message"
         name="message"
@@ -100,12 +63,13 @@ function ContactForm() {
         required
         className="p-2 rounded-md bg-[#1a1a1a] text-white"
       ></textarea>
+      <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button
         type="submit"
-        disabled={submitting}
+        disabled={state.submitting}
         className="bg-gray-600 hover:bg-gray-700 py-2 px-4 rounded-md text-white"
       >
-        {submitting ? "Enviando..." : "Enviar"}
+        Enviar
       </button>
     </form>
   );
