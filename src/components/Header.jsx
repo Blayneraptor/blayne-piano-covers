@@ -292,11 +292,6 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="relative z-10 py-2 px-4 border-t border-gray-700/50 bg-black/30">
-                    <p className="text-center text-xs text-gray-400 italic">
-                      ✨ Selecciona una interpretación ✨
-                    </p>
-                  </div>
                 </div>
               </li>
               <li>
