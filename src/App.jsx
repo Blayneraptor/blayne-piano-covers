@@ -824,7 +824,7 @@ const App = () => {
         id="contacto"
         className="text-white text-center py-8"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.95), transparent), url(${bgImage})`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 2.98), rgba(0, 0, 0, 0.85), transparent), url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
