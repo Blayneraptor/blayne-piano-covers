@@ -45,8 +45,8 @@ function ContactForm() {
         Contacta conmigo
       </h2>
       
-      <div className="absolute -top-3 -left-3 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full filter blur-xl opacity-70"></div>
-      <div className="absolute -bottom-5 -right-5 w-28 h-28 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full filter blur-xl opacity-50"></div>
+      
+
       
       <div className="space-y-4 relative z-10">
         <div className="relative">
@@ -886,9 +886,7 @@ const App = () => {
       >
         {/* Elementos decorativos para el fondo */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-40 h-40 rounded-full bg-blue-500/10 filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 left-1/4 transform -translate-x-1/2 w-20 h-20 rounded-full bg-purple-500/10 filter blur-2xl animate-pulse"></div>
-        <div className="absolute top-20 right-1/4 transform translate-x-1/2 w-30 h-30 rounded-full bg-cyan-500/10 filter blur-2xl animate-pulse animation-delay-500"></div>
+     
         
         <div className="relative p-8 z-10">
           <ContactForm />
