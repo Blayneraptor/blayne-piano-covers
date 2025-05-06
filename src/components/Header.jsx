@@ -234,7 +234,7 @@ const Header = () => {
                   ref={submenuRef}
                   onMouseEnter={handleSubmenuMouseEnter}
                   onMouseLeave={handleSubmenuMouseLeave}
-                  className={`absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 top-full mt-2 z-50 font-normal rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)] backdrop-blur-md w-60 md:w-96 transition-all duration-500 ease-out ${
+                  className={`absolute left-0 md:left-1/2 md:transform md:-translate-x-1/2 top-full mt-2 z-50 font-normal rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(0,_128,_64,_0.3)] backdrop-blur-md w-60 md:w-96 transition-all duration-500 ease-out ${
                     isCoversHovered
                       ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
                       : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
@@ -246,7 +246,7 @@ const Header = () => {
                     WebkitBackdropFilter: "blur(8px)",
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-purple-900/30 z-0"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 to-black-900/30 z-0"></div>
                   <div className="absolute inset-0 bg-[url('../assets/fondoazul.png')] bg-cover bg-center opacity-15 z-0"></div>
                   <div className="relative z-10 py-3 px-4 border-b border-gray-700/50 bg-black/40">
                     <h3 className="text-center text-lg font-semibold text-blue-300 animate-pulse">
