@@ -849,7 +849,7 @@ const App = () => {
       {/* Modal para ver la imagen en grande con mejoras de UX/UI para móvil */}
       {openImage && (
         <div
-          className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-md z-50 p-4 animate-fadeIn"
+          className="fixed inset-0 flex items-center justify-center bg-black/90 backdrop-blur-md z-50 p-4"
           onClick={() => setOpenImage(null)}
         >
           <div className="relative w-full max-w-4xl max-h-[90vh] overflow-hidden">
@@ -867,7 +867,7 @@ const App = () => {
             <img
               src={openImage}
               alt="Imagen ampliada"
-              className="max-w-full max-h-[85vh] rounded-lg object-contain shadow-2xl transform transition-all duration-500 animate-scaleIn"
+              className="max-w-full max-h-[85vh] rounded-lg object-contain shadow-2xl animate-instantAppear"
             />
           </div>
         </div>
