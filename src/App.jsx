@@ -912,7 +912,7 @@ const App = () => {
           </div>
           
           <p className="text-sm text-gray-300">
-            &copy; {new Date().getFullYear()} <span className="font-semibold text-green-400">Blayneraptor</span>. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} <span className="font-semibold text-green-400">cousoworks</span>. Todos los derechos reservados.
           </p>
           
          
