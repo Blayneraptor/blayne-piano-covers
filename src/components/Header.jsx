@@ -133,7 +133,7 @@ const Header = () => {
         ref={headerRef}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-black bg-opacity-70 backdrop-blur-md py-2 shadow-lg shadow-green-900/20"
+            ? "bg-black bg-opacity-70 backdrop-blur-md py-2 shadow-lg shadow-blue-900/20"
             : "bg-transparent backdrop-blur-0 py-4"
         }`}
       >
@@ -143,12 +143,12 @@ const Header = () => {
               <img 
                 src={logoBlayne} 
                 className="h-10 w-10 transition-transform duration-500 transform group-hover:scale-110" 
-                alt="Logo Blayne" 
+                alt="Logo CousoWorks" 
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-green-500 opacity-0 group-hover:opacity-25 transition-opacity duration-500 rounded-full"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-25 transition-opacity duration-500 rounded-full"></div>
             </div>
             <span className="self-center text-xl font-semibold text-white group-hover:text-green-300 transition-colors duration-300">
-              Blayne Covers
+              CousoWorks
             </span>
           </a>
           
@@ -160,7 +160,7 @@ const Header = () => {
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Abrir menú</span>
-            <div className="absolute inset-0 bg-gradient-to-br from-green-800/20 to-green-600/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-green-800/20 to-purple-600/20 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></div>
             <svg
               className={`w-5 h-5 text-white transition-all duration-300 ${isMenuOpen ? "transform rotate-90 scale-110" : ""}`}
               aria-hidden="true"
@@ -198,8 +198,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="relative block py-2 px-3 text-white rounded-lg md:bg-transparent md:p-0 overflow-hidden group"
                 >
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-green-400">Inicio</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-700 to-green-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400">Inicio</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 md:group-hover:opacity-0 transition-opacity duration-300 rounded-md"></span>
                 </a>
               </li>
@@ -219,10 +219,10 @@ const Header = () => {
                   }}
                   className="flex items-center justify-between w-full py-2 px-3 md:p-0 text-white cursor-pointer group relative overflow-hidden rounded-lg md:bg-transparent md:hover:bg-transparent"
                 >
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-green-400">Covers</span>
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400">Covers</span>
                   <svg
                     className={`w-2.5 h-2.5 ms-2.5 transform transition-transform duration-300 ${
-                      isCoversHovered ? "rotate-180 text-green-400" : ""
+                      isCoversHovered ? "rotate-180 text-blue-400" : ""
                     }`}
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +237,7 @@ const Header = () => {
                       d="m1 1 4 4 4-4"
                     />
                   </svg>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-700 to-green-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 md:group-hover:opacity-0 transition-opacity duration-300 rounded-md"></span>
                 </a>
                 
@@ -257,9 +257,9 @@ const Header = () => {
                     border: "1px solid rgba(255, 255, 255, 0.08)",
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-900/10 to-green-800/10 z-0"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-purple-800/10 z-0"></div>
                   <div className="relative z-10 py-3 px-4 border-b border-gray-700/50">
-                    <h3 className="text-center text-lg font-semibold bg-gradient-to-r from-green-400 to-green-300 text-transparent bg-clip-text">
+                    <h3 className="text-center text-lg font-semibold bg-gradient-to-r from-blue-400 to-purple-300 text-transparent bg-clip-text">
                       Mis Interpretaciones
                     </h3>
                   </div>
@@ -280,23 +280,23 @@ const Header = () => {
                           onMouseLeave={() => setActiveSubmenuItem(null)}
                           className={`relative block px-6 py-3 transition-all duration-300 overflow-hidden ${
                             activeSubmenuItem === index
-                              ? "text-white bg-green-900/40"
-                              : "text-gray-200 hover:bg-green-800/20"
+                              ? "text-white bg-blue-900/40"
+                              : "text-gray-200 hover:bg-blue-800/20"
                           } ${isMobile ? "text-base py-4" : ""}`}
                         >
-                          <div className={`absolute inset-0 bg-gradient-to-r from-green-800/20 to-green-600/20 opacity-0 transition-opacity duration-300 ${
+                          <div className={`absolute inset-0 bg-gradient-to-r from-blue-800/20 to-purple-600/20 opacity-0 transition-opacity duration-300 ${
                             activeSubmenuItem === index ? "opacity-100" : ""
                           }`}></div>
                           <span className="relative z-10 transition-transform duration-300 inline-block transform">
                             {item.name}
                           </span>
                           <span
-                            className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-green-700 to-green-500 transition-all duration-300 ease-out ${
+                            className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-700 to-purple-500 transition-all duration-300 ease-out ${
                               activeSubmenuItem === index ? "w-full" : "w-0"
                             }`}
                           ></span>
                           {activeSubmenuItem === index && (
-                            <span className="absolute right-4 top-1/2 transform -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                            <span className="absolute right-4 top-1/2 transform -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-blue-400"></span>
                           )}
                         </a>
                       </li>
@@ -310,8 +310,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="relative block py-2 px-3 text-white rounded-lg md:bg-transparent md:p-0 overflow-hidden group"
                 >
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-green-400">Próximamente</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-700 to-green-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400">Próximamente</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 md:group-hover:opacity-0 transition-opacity duration-300 rounded-md"></span>
                 </a>
               </li>
@@ -321,8 +321,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="relative block py-2 px-3 text-white rounded-lg md:bg-transparent md:p-0 overflow-hidden group"
                 >
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-green-400">Contacto</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-700 to-green-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-blue-400">Contacto</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-700 to-purple-500 group-hover:w-full transition-all duration-300"></span>
                   <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 md:group-hover:opacity-0 transition-opacity duration-300 rounded-md"></span>
                 </a>
               </li>
