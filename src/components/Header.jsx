@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import logoBlayne from "../assets/logoblayne.png";
+import logocouso from "../assets/logocouso.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -141,7 +141,7 @@ const Header = () => {
           <a href="#" className="flex items-center space-x-3 group">
             <div className="relative overflow-hidden rounded-full">
               <img 
-                src={logoBlayne} 
+                src={logocouso} 
                 className="h-10 w-10 transition-transform duration-500 transform group-hover:scale-110" 
                 alt="Logo CousoWorks" 
               />
